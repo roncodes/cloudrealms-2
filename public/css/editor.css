@@ -1,0 +1,71 @@
+body, html {
+	background: url('../../public/img/tasky_pattern.png') repeat #4CB3FC;
+	padding-top: 30px;
+	padding-bottom: 20px;
+	overflow:hidden;
+}
+.pane {
+	display:block;
+	background:#ffffff;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+	padding:20px;
+}
+.map_editor_resources_pane {
+	display:block;
+	background:#ffffff;
+	height:600px;
+}
+.map_grid {
+	display:block;
+	position:absolute;
+	z-index:1035;
+	left:0;
+	top:0;
+	margin-top:40px;
+	width:100%;
+	height:100%;
+	background:#4774FC;
+	overflow:hidden;
+}
+.map_tools {
+	margin-top:-20px;
+	background:#fff;
+	width:100%;
+	-webkit-border-bottom-right-radius: 6px;
+	-webkit-border-bottom-left-radius: 6px;
+	-moz-border-radius-bottomright: 6px;
+	-moz-border-radius-bottomleft: 6px;
+	border-bottom-right-radius: 6px;
+	border-bottom-left-radius: 6px;
+	z-index:1036;
+	display:block;
+	position:relative;
+	display:none;
+}
+.tile {
+	border-right:1px #000 solid;
+	border-bottom:1px #000 solid;
+	display:block;
+	float:left;
+	background:#1DF577;
+	cursor:pointer;
+}
+.tile:hover {
+	background:#12C95F;
+}
+.active-resource {
+	background:#D6D6D6;
+}
+#notif {
+	display:block;
+	position:absolute;
+	z-index:999999;
+	bottom:0;
+	left:0;
+	margin-left:100px;
+	margin-bottom:100px;
+	display:none;
+	width:400px;
+}
