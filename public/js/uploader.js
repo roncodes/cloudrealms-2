@@ -162,19 +162,20 @@ qq.children = function(element){
 };
 
 qq.getByClass = function(element, className){
-    if (element.querySelectorAll){
-        return element.querySelectorAll('.' + className);
-    }
+	if(element!=null){
+		if (element.querySelectorAll){
+			return element.querySelectorAll('.' + className);
+		}
+		var result = [];
+		var candidates = element.getElementsByTagName("*");
+		var len = candidates.length;
 
-    var result = [];
-    var candidates = element.getElementsByTagName("*");
-    var len = candidates.length;
-
-    for (var i = 0; i < len; i++){
-        if (qq.hasClass(candidates[i], className)){
-            result.push(candidates[i]);
-        }
-    }
+		for (var i = 0; i < len; i++){
+			if (qq.hasClass(candidates[i], className)){
+				result.push(candidates[i]);
+			}
+		}
+	}
     return result;
 };
 
@@ -521,7 +522,9 @@ qq.FileUploader = function(o){
     qq.extend(this._options, o);       
 
     this._element = this._options.element;
-    this._element.innerHTML = this._options.template;        
+	if(this._element!=null){
+		this._element.innerHTML = this._options.template;       
+	}
     this._listElement = this._options.listElement || this._find(this._element, 'list');
     
     this._classes = this._options.classes;

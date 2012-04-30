@@ -20,14 +20,18 @@ body, html {
 .map_grid {
 	display:block;
 	position:absolute;
-	z-index:1035;
 	left:0;
 	top:0;
 	margin-top:40px;
 	width:100%;
 	height:100%;
-	background:#4774FC;
 	overflow:hidden;
+}
+#map_ground {
+	z-index:300;
+}
+#map_environment {
+	z-index:500;
 }
 .map_tools {
 	margin-top:-20px;
@@ -44,16 +48,38 @@ body, html {
 	position:relative;
 	display:none;
 }
-.tile {
+.ground_tile {
 	border-right:1px #000 solid;
 	border-bottom:1px #000 solid;
 	display:block;
 	float:left;
 	background:#1DF577;
 	cursor:pointer;
+	overflow:none;
 }
-.tile:hover {
+.ground_tile:hover {
 	background:#12C95F;
+}
+.environment_tile {
+	border-right:1px #000 solid;
+	border-bottom:1px #000 solid;
+	display:block;
+	float:left;
+	cursor:pointer;
+	overflow:none;
+}
+.environment_tile:hover {
+	background:#E01B98;
+}
+.resource-tile {
+	display:block;
+	float:left;
+	background:#1DF577;
+	cursor:pointer;
+}
+.resource-tile:hover {
+	opacity:0.6;
+	filter:alpha(opacity=60); /* For IE8 and earlier */
 }
 .active-resource {
 	background:#D6D6D6;
@@ -68,4 +94,35 @@ body, html {
 	margin-bottom:100px;
 	display:none;
 	width:400px;
+}
+.tiles-box {
+	display:block;
+	position:absolute;
+	z-index:1111;
+}
+.cmodal {
+	margin-top:39px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 1050;
+	width: 460px;
+	height:100%;
+	background-color: white;
+	border: 1px solid #999;
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding-box;
+	background-clip: padding-box;
+}
+::-moz-selection{
+    background-color:Transparent;
+    color:#000;
+}
+::selection {
+	background-color:Transparent;
+	color:#000;
 }

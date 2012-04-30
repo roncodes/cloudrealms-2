@@ -16,11 +16,11 @@
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		<!-- Javascript -->
-		<script type="text/javascript" src="<?=base_url()?>public/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="<?=base_url()?>public/js/bootstrap-dropdown.js"></script>
 		<script type="text/javascript" src="<?=base_url()?>public/js/jquery.js"></script>
+		<script type="text/javascript" src="<?=base_url()?>public/js/jquery-ui.js"></script>
+		<script type="text/javascript" src="<?=base_url()?>public/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="<?=base_url()?>public/js/editor.js"></script>
-		<script src="<?=base_url()?>public/js/uploader.js" type="text/javascript"></script>
+		<script type="text/javascript" src="<?=base_url()?>public/js/uploader.js"></script>
 	</head>
 	
 	<body>
@@ -31,7 +31,26 @@
 				<div class="nav-collapse">
 					<ul class="nav">
 						<li <?php if($page==''||$page=='dashboard'){ ?> class="active" <? } ?> id="dashboard"><a href="<?=base_url()?>editor">Home</a></li>
-						<li <?php if($page=='map_editor'){ ?> class="active" <? } ?> id="map_editor"><a href="<?=base_url()?>editor/map_editor">Map Editor</a></li>
+						<li <?php if($page=='map_editor'){ ?> class="dropdown active" <? } else { ?>class="dropdown"<?php } ?> id="map_editor">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="<?=base_url()?>editor/map_editor">Map Editor<b class="caret"></b></a>
+							<ul class="dropdown-menu" style="z-index:999999;position:absolute;">
+								<?php if($page=='map_editor'&&$location!=''){ ?>
+								<li><a style="cursor:pointer;" onclick="location_properties();">Location Properties</a></li>
+								<li><a style="cursor:pointer;" onclick="display_map();">Display Map</a></li>
+								<li><a style="cursor:pointer;" onclick="ground_layer();">Ground Layer</a></li>
+								<li><a style="cursor:pointer;" onclick="environment_layer();">Environment Layer</a></li>
+								<li><a style="cursor:pointer;" onclick="open_tiles();">Tiles</a></li>
+								<li><a style="cursor:pointer;" onclick="open_objects();">Objects</a></li>
+								<li><a style="cursor:pointer;" onclick="open_creatures();">Creatures</a></li>
+								<li><a style="cursor:pointer;" onclick="open_characters();">Characters</a></li>
+								<li class="divider"></li>
+								<li><a style="cursor:pointer;" href="<?=base_url()?>editor/map_editor">Start Page</a></li>
+								<li><a style="cursor:pointer;" onclick="save_map('<?php echo $location; ?>');">Save Map</a></li>
+								<?php } else { ?>
+								<li><a style="cursor:pointer;" href="<?=base_url()?>editor/map_editor">Open</a></li>
+								<?php } ?>
+							</ul>
+						</li>
 						<li <?php if($page=='locations'){ ?> class="active" <? } ?> id="locations"><a href="<?=base_url()?>editor/locations">Locations</a></li>
 						<li <?php if($page=='items'){ ?> class="active" <? } ?> id="items"><a href="<?=base_url()?>editor/items">Items</a></li>
 						<li <?php if($page=='creatures'){ ?> class="active" <? } ?> id="creatures"><a href="<?=base_url()?>editor/creatures">Creatures</a></li>
@@ -48,4 +67,3 @@
 		</div>
 	</div>
 	<div class="container">
-	
