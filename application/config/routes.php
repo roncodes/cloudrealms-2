@@ -38,9 +38,7 @@
 |
 */
 
-$route['default_controller'] = "welcome";
-$route['editor/(:any)'] = "editor/$1";
-$route['uploader'] = "uploader";
+$route['default_controller'] = "auth";
 $route['404_override'] = '';
 
 
