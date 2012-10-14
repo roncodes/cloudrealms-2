@@ -1,26 +1,16 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Dashboard extends MY_Controller {
+class Ajax extends MY_Controller {
 
 	public function __construct()
 	{
 		parent::__construct();
-		$this->data = array();
-		$this->set_data();
+		$this->layout = false;
 	}
 	
 	public function index()
 	{
-		// do code ?
-	}
-	
-	public function set_data()
-	{
-		$this->data['page'] = $this->uri->segment(2);
-	}
-	
-	public function ajax()
-	{
+		$this->view = false;
 		if(isset($_GET['action'])){
 			switch($_GET['action']){
 				case 'delete_resource':
@@ -88,76 +78,4 @@ class Dashboard extends MY_Controller {
 		}
 	}
 	
-	public function test()
-	{
-		var_dump($this->is_new_location('winterhold'));
-		// $this->load->view('wrappers/editor/header', $this->data);
-		// $this->load->view('editor/test', $this->data);
-	}
-	
-	public function map_editor()
-	{
-		$this->data['sprites'] = glob("resources/sprites/*");
-		$this->data['tiles'] = glob("resources/tiles/*");
-		$this->data['locations'] = $this->get_locations();
-		$this->data['location'] = $this->uri->segment(3);
-		$this->data['new_map'] = false;
-		if($this->data['location']){
-			if($this->is_new_location($this->data['location'])){
-				$this->data['new_map'] = true;
-			}
-		}
-		$this->_display('editor/map_editor', $this->data);
-	}
-	
-	public function location_name_available($location)
-	{
-		$this->load->database();
-		$query = $this->db->query("SELECT * FROM locations");
-		foreach ($query->result() as $row){
-			if($location==$row->name){
-				return false;
-			}
-		}
-		return true;
-	}
-	
-	public function is_new_location($location)
-	{
-		$this->load->database();
-		$query = $this->db->query("SELECT * FROM locations WHERE name = '$location'");
-		if($query->row()->ground_map!=''){
-			return false;
-		}
-		return true;
-	}
-	
-	public function get_locations($locations=array())
-	{
-		$this->load->database();
-		$query = $this->db->query("SELECT * FROM locations");
-		foreach ($query->result() as $row){
-			$locations[] = $row;
-		}
-		return $locations;
-	}
-	
-	public function resources()
-	{
-		$this->data['resource'] = $this->uri->segment(3);
-		$this->data['resources'] = glob("resources/".$this->uri->segment(3)."/*");
-		$this->_display('editor/resources', $this->data);
-	}
-	
-	public function dashboard()
-	{
-		$this->_display('editor/dashboard', $this->data);
-	}
-	
-	public function _display($view, $data)
-	{
-		$this->load->view('wrappers/editor/header', $data);
-		$this->load->view($view, $data);
-		$this->load->view('wrappers/editor/footer', $data);
-	}
 }

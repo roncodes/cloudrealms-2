@@ -34,7 +34,6 @@ $(function() {
 });
 /* Global vars not onload */
 var selected_tile = null;
-var base_url = 'http://localhost/cloudrealms3/';
 var tiles_open = 0;
 var grid_x = 40;
 var grid_y = 23;
@@ -51,7 +50,7 @@ var parse_tile = function(tile){
 	return tile;
 }
 var load_map_ground = function(location){
-	$.post(base_url+"editor/ajax/?action=get_ground&location="+location, function(data){
+	$.post("../../../editor/ajax/?action=get_ground&location="+location, function(data){
 		var loc = "'"+location+"'";
 		id = 0;
 		if(data!=''){
@@ -72,8 +71,8 @@ var load_map_ground = function(location){
 							stretch_height = rows*tile_height;
 							// alert(stretch_width+' x '+stretch_height);
 						}
-						img.src = base_url+tile[3];
-						$('#map_ground').append('<div id="g_'+i+'_'+j+'" onmousedown="set_tile_click('+id+', '+loc+', this);" onmouseover="set_tile('+id+', '+loc+', this);" class="ground_tile" style="width:'+tile_width+'px;height:'+tile_height+'px;"><div style="background:url('+base_url+tile[3]+');background-position:-'+tile[4]+'px -'+tile[5]+'px;height:'+tile[6]+'px;width:'+tile[6]+'px;background-size:'+stretch_width+'px '+stretch_height+'px;"></div></div>');
+						img.src = tile[3];
+						$('#map_ground').append('<div id="g_'+i+'_'+j+'" onmousedown="set_tile_click('+id+', '+loc+', this);" onmouseover="set_tile('+id+', '+loc+', this);" class="ground_tile" style="width:'+tile_width+'px;height:'+tile_height+'px;"><div style="background:url('+tile[3]+');background-position:-'+tile[4]+'px -'+tile[5]+'px;height:'+tile[6]+'px;width:'+tile[6]+'px;background-size:'+stretch_width+'px '+stretch_height+'px;"></div></div>');
 					} else {
 						$('#map_ground').append('<div id="g_'+i+'_'+j+'" onmousedown="set_tile_click('+id+', '+loc+', this);" onmouseover="set_tile('+id+', '+loc+', this);" class="ground_tile" style="width:'+tile_width+'px;height:'+tile_height+'px;"></div>');
 					}
@@ -91,7 +90,7 @@ var load_map_ground = function(location){
 	});
 }
 var load_map_environment = function(location){
-	$.post(base_url+"editor/ajax/?action=get_environment&location="+location, function(data){
+	$.post("../../../editor/ajax/?action=get_environment&location="+location, function(data){
 		var loc = "'"+location+"'";
 		id = 0;
 		if(data!=''){
@@ -112,8 +111,8 @@ var load_map_environment = function(location){
 							stretch_height = rows*tile_height;
 							// alert(stretch_width+' x '+stretch_height);
 						}
-						img.src = base_url+tile[3];
-						$('#map_environment').append('<div id="e_'+i+'_'+j+'" onmousedown="set_tile_click('+id+', '+loc+', this);" onmouseover="set_tile('+id+', '+loc+', this);" class="environment_tile" style="width:'+tile_width+'px;height:'+tile_height+'px;"><div style="background:url('+base_url+tile[3]+');background-position:-'+tile[4]+'px -'+tile[5]+'px;height:'+tile[6]+'px;width:'+tile[6]+'px;"></div></div>');
+						img.src = tile[3];
+						$('#map_environment').append('<div id="e_'+i+'_'+j+'" onmousedown="set_tile_click('+id+', '+loc+', this);" onmouseover="set_tile('+id+', '+loc+', this);" class="environment_tile" style="width:'+tile_width+'px;height:'+tile_height+'px;"><div style="background:url('+tile[3]+');background-position:-'+tile[4]+'px -'+tile[5]+'px;height:'+tile[6]+'px;width:'+tile[6]+'px;"></div></div>');
 					} else {
 						$('#map_environment').append('<div id="e_'+i+'_'+j+'" onmousedown="set_tile_click('+id+', '+loc+', this);" onmouseover="set_tile('+id+', '+loc+', this);" class="environment_tile" style="width:'+tile_width+'px;height:'+tile_height+'px;"></div>');
 					}
@@ -190,7 +189,7 @@ var open_tiles = function(){
 var set_tile = function(id, location, tile){
 	if(isMouseDown){
 		if(selected_tile!=null){
-			$.post(base_url+"editor/ajax/?action=set_tile&tilesheet="+selected_tile[0]+"&offx="+selected_tile[1]+"&offy="+selected_tile[2]+"&id="+id+"&layer="+layer+"&location="+location+"&size="+selected_tile[3], function(data){
+			$.post("editor/ajax/?action=set_tile&tilesheet="+selected_tile[0]+"&offx="+selected_tile[1]+"&offy="+selected_tile[2]+"&id="+id+"&layer="+layer+"&location="+location+"&size="+selected_tile[3], function(data){
 				if(data=='success'){
 					$(tile).html('<div style="background:url('+base_url+selected_tile[0]+');background-position:-'+selected_tile[1]+'px -'+selected_tile[2]+'px;height:'+selected_tile[3]+'px;width:'+selected_tile[3]+'px;"></div>');
 				}
@@ -202,7 +201,7 @@ var set_tile = function(id, location, tile){
 }
 var set_tile_click = function(id, location, tile){
 	if(selected_tile!=null){
-		$.post(base_url+"editor/ajax/?action=set_tile&tilesheet="+selected_tile[0]+"&offx="+selected_tile[1]+"&offy="+selected_tile[2]+"&id="+id+"&layer="+layer+"&location="+location+"&size="+selected_tile[3], function(data){
+		$.post("editor/ajax/?action=set_tile&tilesheet="+selected_tile[0]+"&offx="+selected_tile[1]+"&offy="+selected_tile[2]+"&id="+id+"&layer="+layer+"&location="+location+"&size="+selected_tile[3], function(data){
 			if(data=='success'){
 				$(tile).html('<div style="background:url('+base_url+selected_tile[0]+');background-position:-'+selected_tile[1]+'px -'+selected_tile[2]+'px;height:'+selected_tile[3]+'px;width:'+selected_tile[3]+'px;"></div>');
 			}
@@ -249,7 +248,7 @@ var save_map = function(location){
 			environment_map += '{'+i+'|'+tile_data[1]+'|'+tile_data[2]+'|'+element_data[0]+'|'+element_data[1]+'|yoff|'+element_data[2]+',';
 		}
 	});
-	$.post(base_url+"editor/ajax/?action=save_map", {ground_map: ground_map, environment_map: environment_map, location: location}, function(data){
+	$.post("editor/ajax/?action=save_map", {ground_map: ground_map, environment_map: environment_map, location: location}, function(data){
 		if(data=='success'){
 			notif("success", "Map Saved", "Map has been successfully saved");
 		} else {
@@ -268,7 +267,7 @@ var first_save = function(location){
 		tile_data = parse_tile_id($(this).attr('id'));
 		environment_map += '{'+i+'|'+tile_data[1]+'|'+tile_data[2]+'|tilesheet|xoff|yoff|size},';
 	});
-	$.post(base_url+"editor/ajax/?action=save_map", {ground_map: ground_map, environment_map: environment_map, location: location}, function(data){
+	$.post("editor/ajax/?action=save_map", {ground_map: ground_map, environment_map: environment_map, location: location}, function(data){
 		if(data=='success'){
 			notif("success", "Map Saved", "Map has been successfully saved");
 		} else {
@@ -282,6 +281,7 @@ var parse_tile_id = function(id){
 	return data;
 }
 var parse_inner_element = function(ele){
+	var element_data = new Array();
 	if(ele){
 		element_data[0] = $(ele).css('background');
 		element_data[1] = $(ele).css('background-position');
@@ -296,9 +296,9 @@ var cancel_new_location = function(){
 	$('#start_body').html($('#start_page').html());
 }
 var create_new_location = function(){
-	$.post(base_url+"editor/ajax/?action=create_location&location_name="+$('#location_name').val(), function(data){
+	$.post("editor/ajax/?action=create_location&location_name="+$('#location_name').val(), function(data){
 		if(data=='success'){
-			window.location = base_url+"editor/map_editor/"+$('#location_name').val().toLowerCase();
+			window.location = "editor/map/"+$('#location_name').val().toLowerCase();
 		} else if(data=='name_exist'){
 			notif("error", "Failure", "Location name already exist");
 		} else {

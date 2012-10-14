@@ -21,7 +21,7 @@ class Auth extends MY_Controller {
 			// Not an admin, redirect them to the home page because they must be an administrator to view this
 			redirect(base_url());
 		} 
-		redirect('editor/dashboard');
+		redirect('editor');
 	}
 
 	function login()

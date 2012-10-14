@@ -38,8 +38,9 @@
 |
 */
 
-$route['default_controller'] = "auth";
+$route['default_controller'] = 'auth';
 $route['404_override'] = '';
+$route['editor'] = 'editor/dashboard';
 
 
 /* End of file routes.php */

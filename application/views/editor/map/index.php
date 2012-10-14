@@ -62,7 +62,7 @@ setTimeout("save_map('<?php echo $location; ?>')", 1200);
 			<a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
 			<ul class="dropdown-menu" style="z-index:999999999;position:absolute;">
 				<?php foreach($locations as $location){ ?>
-				<li><a href="<?=base_url()?>editor/map_editor/<?php echo strtolower($location->name); ?>"><i class="icon-edit"></i> <?php echo $location->name; ?></a></li>
+				<li><a href="<?=base_url('editor/map/view/'.strtolower($location->name))?>"><i class="icon-edit"></i> <?php echo $location->name; ?></a></li>
 				<?php } ?>
 			</ul>
 		</div>
