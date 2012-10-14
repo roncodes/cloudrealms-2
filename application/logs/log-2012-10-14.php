@@ -112,3 +112,98 @@ ERROR - 2012-10-14 20:29:50 --> Severity: Notice  --> Trying to get property of 
 ERROR - 2012-10-14 20:29:50 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
 ERROR - 2012-10-14 20:31:19 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
 ERROR - 2012-10-14 20:31:20 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 20:37:57 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 20:37:58 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 20:38:21 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 20:38:22 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 20:39:59 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 20:40:09 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 20:40:10 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 20:40:11 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 20:40:32 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 20:40:32 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 20:45:34 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 20:45:46 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 20:45:47 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 20:46:20 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 20:46:20 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 20:46:21 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 20:46:42 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 20:46:43 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 20:46:43 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 20:47:40 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 20:47:41 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 20:48:05 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 20:48:05 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 20:48:51 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 20:48:51 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 20:49:23 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 20:49:23 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 20:50:12 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 20:50:12 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 20:51:13 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 20:51:27 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 20:51:46 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 20:51:55 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 20:51:57 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 20:52:10 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 20:52:13 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 20:52:14 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 20:52:15 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 20:58:05 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 20:58:11 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 21:00:11 --> Severity: Notice  --> Undefined variable: tiles C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 16
+ERROR - 2012-10-14 21:00:11 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 16
+ERROR - 2012-10-14 21:00:11 --> Severity: Notice  --> Undefined variable: tiles C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 26
+ERROR - 2012-10-14 21:00:11 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 26
+ERROR - 2012-10-14 21:00:21 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 21:00:37 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 21:00:42 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 21:00:44 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 21:00:45 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 21:00:45 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 21:00:46 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 21:00:47 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 21:00:48 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 21:00:48 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 21:00:49 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 21:00:49 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 21:00:50 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 21:00:50 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 21:01:30 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 21:01:38 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 21:01:42 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 21:02:15 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 21:03:06 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 21:03:06 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 21:04:11 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 21:04:22 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 21:04:27 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 21:04:28 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 21:04:36 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 21:05:04 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 21:05:53 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 21:08:14 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 21:08:18 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 21:16:02 --> Severity: Notice  --> Undefined variable: updated_tile C:\wamp\www\cloudrealms3\application\controllers\editor\ajax.php 60
+ERROR - 2012-10-14 21:16:59 --> Severity: Notice  --> Undefined variable: updated_tile C:\wamp\www\cloudrealms3\application\controllers\editor\ajax.php 60
+ERROR - 2012-10-14 21:17:01 --> Severity: Notice  --> Undefined variable: updated_tile C:\wamp\www\cloudrealms3\application\controllers\editor\ajax.php 60
+ERROR - 2012-10-14 21:17:26 --> 404 Page Not Found --> editor/map_editor
+ERROR - 2012-10-14 21:17:47 --> Severity: Notice  --> Undefined variable: tiles C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 16
+ERROR - 2012-10-14 21:17:47 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 16
+ERROR - 2012-10-14 21:17:47 --> Severity: Notice  --> Undefined variable: tiles C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 26
+ERROR - 2012-10-14 21:17:47 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 26
+ERROR - 2012-10-14 21:18:04 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 21:22:59 --> Severity: Notice  --> Undefined variable: tiles C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 16
+ERROR - 2012-10-14 21:22:59 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 16
+ERROR - 2012-10-14 21:22:59 --> Severity: Notice  --> Undefined variable: tiles C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 26
+ERROR - 2012-10-14 21:22:59 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 26
+ERROR - 2012-10-14 21:23:27 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 21:23:27 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 21:23:27 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 21:23:28 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 21:23:29 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-14 21:23:50 --> Severity: Notice  --> Undefined variable: tiles C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 16
+ERROR - 2012-10-14 21:23:50 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 16
+ERROR - 2012-10-14 21:23:50 --> Severity: Notice  --> Undefined variable: tiles C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 26
+ERROR - 2012-10-14 21:23:50 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 26

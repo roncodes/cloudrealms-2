@@ -39,13 +39,13 @@
 								<li><a style="cursor:pointer;" onclick="display_map();">Display Map</a></li>
 								<li><a style="cursor:pointer;" onclick="ground_layer();">Ground Layer</a></li>
 								<li><a style="cursor:pointer;" onclick="environment_layer();">Environment Layer</a></li>
+								<li class="divider"></li>
 								<li><a style="cursor:pointer;" onclick="open_tiles();">Tiles</a></li>
 								<li><a style="cursor:pointer;" onclick="open_objects();">Objects</a></li>
 								<li><a style="cursor:pointer;" onclick="open_creatures();">Creatures</a></li>
 								<li><a style="cursor:pointer;" onclick="open_characters();">Characters</a></li>
 								<li class="divider"></li>
-								<li><a style="cursor:pointer;" href="<?=base_url('editor/map_editor')?>">Start Page</a></li>
-								<li><a style="cursor:pointer;" onclick="save_map('<?php echo $location; ?>');">Save Map</a></li>
+								<li><a style="cursor:pointer;" href="<?=base_url('editor/map')?>">Start Page</a></li>
 								<?php } else { ?>
 								<li><a style="cursor:pointer;" href="<?=base_url('editor/map')?>">Open</a></li>
 								<?php } ?>

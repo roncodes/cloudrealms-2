@@ -71,8 +71,8 @@ var load_map_ground = function(location){
 							stretch_height = rows*tile_height;
 							// alert(stretch_width+' x '+stretch_height);
 						}
-						img.src = tile[3];
-						$('#map_ground').append('<div id="g_'+i+'_'+j+'" onmousedown="set_tile_click('+id+', '+loc+', this);" onmouseover="set_tile('+id+', '+loc+', this);" class="ground_tile" style="width:'+tile_width+'px;height:'+tile_height+'px;"><div style="background:url('+tile[3]+');background-position:-'+tile[4]+'px -'+tile[5]+'px;height:'+tile[6]+'px;width:'+tile[6]+'px;background-size:'+stretch_width+'px '+stretch_height+'px;"></div></div>');
+						img.src = parse_tile_src(tile[3]);
+						$('#map_ground').append('<div id="g_'+i+'_'+j+'" onmousedown="set_tile_click('+id+', '+loc+', this);" onmouseover="set_tile('+id+', '+loc+', this);" class="ground_tile" style="width:'+tile_width+'px;height:'+tile_height+'px;"><div style="background:url('+parse_tile_src(tile[3])+');background-position:-'+tile[4]+'px -'+tile[5]+'px;height:'+tile[6]+'px;width:'+tile[6]+'px;background-size:'+stretch_width+'px '+stretch_height+'px;"></div></div>');
 					} else {
 						$('#map_ground').append('<div id="g_'+i+'_'+j+'" onmousedown="set_tile_click('+id+', '+loc+', this);" onmouseover="set_tile('+id+', '+loc+', this);" class="ground_tile" style="width:'+tile_width+'px;height:'+tile_height+'px;"></div>');
 					}
@@ -111,8 +111,8 @@ var load_map_environment = function(location){
 							stretch_height = rows*tile_height;
 							// alert(stretch_width+' x '+stretch_height);
 						}
-						img.src = tile[3];
-						$('#map_environment').append('<div id="e_'+i+'_'+j+'" onmousedown="set_tile_click('+id+', '+loc+', this);" onmouseover="set_tile('+id+', '+loc+', this);" class="environment_tile" style="width:'+tile_width+'px;height:'+tile_height+'px;"><div style="background:url('+tile[3]+');background-position:-'+tile[4]+'px -'+tile[5]+'px;height:'+tile[6]+'px;width:'+tile[6]+'px;"></div></div>');
+						img.src = parse_tile_src(tile[3]);
+						$('#map_environment').append('<div id="e_'+i+'_'+j+'" onmousedown="set_tile_click('+id+', '+loc+', this);" onmouseover="set_tile('+id+', '+loc+', this);" class="environment_tile" style="width:'+tile_width+'px;height:'+tile_height+'px;"><div style="background:url('+parse_tile_src(tile[3])+');background-position:-'+tile[4]+'px -'+tile[5]+'px;height:'+tile[6]+'px;width:'+tile[6]+'px;"></div></div>');
 					} else {
 						$('#map_environment').append('<div id="e_'+i+'_'+j+'" onmousedown="set_tile_click('+id+', '+loc+', this);" onmouseover="set_tile('+id+', '+loc+', this);" class="environment_tile" style="width:'+tile_width+'px;height:'+tile_height+'px;"></div>');
 					}
@@ -161,7 +161,7 @@ var display_resource_details = function(div){
 	}
 }
 var delete_resource = function(resource, id){
-	$.post(base_url+"editor/ajax/?action=delete_resource&resource="+resource, function(data){
+	$.post("editor/ajax/?action=delete_resource&resource="+resource, function(data){
 		if(data=='success'){
 			$(id).fadeOut();
 			notif("success", "Success!", "Resource was deleted");
@@ -189,9 +189,9 @@ var open_tiles = function(){
 var set_tile = function(id, location, tile){
 	if(isMouseDown){
 		if(selected_tile!=null){
-			$.post("editor/ajax/?action=set_tile&tilesheet="+selected_tile[0]+"&offx="+selected_tile[1]+"&offy="+selected_tile[2]+"&id="+id+"&layer="+layer+"&location="+location+"&size="+selected_tile[3], function(data){
+			$.post("../../../editor/ajax/?action=set_tile&tilesheet="+selected_tile[0]+"&offx="+selected_tile[1]+"&offy="+selected_tile[2]+"&id="+id+"&layer="+layer+"&location="+location+"&size="+selected_tile[3], function(data){
 				if(data=='success'){
-					$(tile).html('<div style="background:url('+base_url+selected_tile[0]+');background-position:-'+selected_tile[1]+'px -'+selected_tile[2]+'px;height:'+selected_tile[3]+'px;width:'+selected_tile[3]+'px;"></div>');
+					$(tile).html('<div style="background:url('+selected_tile[0]+');background-position:-'+selected_tile[1]+'px -'+selected_tile[2]+'px;height:'+selected_tile[3]+'px;width:'+selected_tile[3]+'px;"></div>');
 				}
 			});
 		} else {
@@ -201,9 +201,9 @@ var set_tile = function(id, location, tile){
 }
 var set_tile_click = function(id, location, tile){
 	if(selected_tile!=null){
-		$.post("editor/ajax/?action=set_tile&tilesheet="+selected_tile[0]+"&offx="+selected_tile[1]+"&offy="+selected_tile[2]+"&id="+id+"&layer="+layer+"&location="+location+"&size="+selected_tile[3], function(data){
+		$.post("../../../editor/ajax/?action=set_tile&tilesheet="+selected_tile[0]+"&offx="+selected_tile[1]+"&offy="+selected_tile[2]+"&id="+id+"&layer="+layer+"&location="+location+"&size="+selected_tile[3], function(data){
 			if(data=='success'){
-				$(tile).html('<div style="background:url('+base_url+selected_tile[0]+');background-position:-'+selected_tile[1]+'px -'+selected_tile[2]+'px;height:'+selected_tile[3]+'px;width:'+selected_tile[3]+'px;"></div>');
+				$(tile).html('<div style="background:url('+parse_tile_src(selected_tile[0])+');background-position:-'+selected_tile[1]+'px -'+selected_tile[2]+'px;height:'+selected_tile[3]+'px;width:'+selected_tile[3]+'px;"></div>');
 			}
 		});
 	} else {
@@ -223,62 +223,66 @@ var notif = function(type, subject, notif){
 var close_notif = function(){
 	$('#notif').fadeOut();
 }
-var save_map = function(location){
-	var ground_map = '';
-	var environment_map = '';
-	$(".ground_tile").each(function(i) {
-		tile_data = parse_tile_id($(this).attr('id'));
-		if($(this).children("div")){
-			element_data = parse_inner_element($(this).children("div"));
-		}
-		if(element_data[0]!=''){
-			ground_map += '{'+i+'|'+tile_data[1]+'|'+tile_data[2]+'|tilesheet|xoff|yoff|size},';
-		} else {
-			ground_map += '{'+i+'|'+tile_data[1]+'|'+tile_data[2]+'|'+element_data[0]+'|'+element_data[1]+'|yoff|'+element_data[2]+',';
-		}
-	});
-	$(".environment_tile").each(function(i) {
-		tile_data = parse_tile_id($(this).attr('id'));
-		if($(this).children("div")){
-			element_data = parse_inner_element($(this).children("div"));
-		}
-		if(element_data[0]!=''){
-			environment_map += '{'+i+'|'+tile_data[1]+'|'+tile_data[2]+'|tilesheet|xoff|yoff|size},';
-		} else {
-			environment_map += '{'+i+'|'+tile_data[1]+'|'+tile_data[2]+'|'+element_data[0]+'|'+element_data[1]+'|yoff|'+element_data[2]+',';
-		}
-	});
-	$.post("editor/ajax/?action=save_map", {ground_map: ground_map, environment_map: environment_map, location: location}, function(data){
-		if(data=='success'){
-			notif("success", "Map Saved", "Map has been successfully saved");
-		} else {
-			notif("error", "Failure", "Map failed to save");
-		}
-	});
-}
-var first_save = function(location){
-	var ground_map = '';
-	var environment_map = '';
-	$(".ground_tile").each(function(i) {
-		tile_data = parse_tile_id($(this).attr('id'));
-		ground_map += '{'+i+'|'+tile_data[1]+'|'+tile_data[2]+'|tilesheet|xoff|yoff|size},';
-	});
-	$(".environment_tile").each(function(i) {
-		tile_data = parse_tile_id($(this).attr('id'));
-		environment_map += '{'+i+'|'+tile_data[1]+'|'+tile_data[2]+'|tilesheet|xoff|yoff|size},';
-	});
-	$.post("editor/ajax/?action=save_map", {ground_map: ground_map, environment_map: environment_map, location: location}, function(data){
-		if(data=='success'){
-			notif("success", "Map Saved", "Map has been successfully saved");
-		} else {
-			notif("error", "Failure", "Map failed to save");
-		}
-	});
-}
+// var save_map = function(location){
+	// var ground_map = '';
+	// var environment_map = '';
+	// $(".ground_tile").each(function(i) {
+		// tile_data = parse_tile_id($(this).attr('id'));
+		// if($(this).children("div")){
+			// element_data = parse_inner_element($(this).children("div"));
+		// }
+		// if(element_data[0]!=''){
+			// ground_map += '{'+i+'|'+tile_data[1]+'|'+tile_data[2]+'|tilesheet|xoff|yoff|size},';
+		// } else {
+			// ground_map += '{'+i+'|'+tile_data[1]+'|'+tile_data[2]+'|'+element_data[0]+'|'+element_data[1]+'|yoff|'+element_data[2]+',';
+		// }
+	// });
+	// $(".environment_tile").each(function(i) {
+		// tile_data = parse_tile_id($(this).attr('id'));
+		// if($(this).children("div")){
+			// element_data = parse_inner_element($(this).children("div"));
+		// }
+		// if(element_data[0]!=''){
+			// environment_map += '{'+i+'|'+tile_data[1]+'|'+tile_data[2]+'|tilesheet|xoff|yoff|size},';
+		// } else {
+			// environment_map += '{'+i+'|'+tile_data[1]+'|'+tile_data[2]+'|'+element_data[0]+'|'+element_data[1]+'|yoff|'+element_data[2]+',';
+		// }
+	// });
+	// $.post("../../../editor/ajax/?action=save_map", {ground_map: ground_map, environment_map: environment_map, location: location}, function(data){
+		// if(data=='success'){
+			// notif("success", "Map Saved", "Map has been successfully saved");
+		// } else {
+			// notif("error", "Failure", "Map failed to save");
+		// }
+	// });
+// }
+// var first_save = function(location){
+	// var ground_map = '';
+	// var environment_map = '';
+	// $(".ground_tile").each(function(i) {
+		// tile_data = parse_tile_id($(this).attr('id'));
+		// ground_map += '{'+i+'|'+tile_data[1]+'|'+tile_data[2]+'|tilesheet|xoff|yoff|size},';
+	// });
+	// $(".environment_tile").each(function(i) {
+		// tile_data = parse_tile_id($(this).attr('id'));
+		// environment_map += '{'+i+'|'+tile_data[1]+'|'+tile_data[2]+'|tilesheet|xoff|yoff|size},';
+	// });
+	// $.post("../../../editor/ajax/?action=save_map", {ground_map: ground_map, environment_map: environment_map, location: location}, function(data){
+		// if(data=='success'){
+			// notif("success", "Map Saved", "Map has been successfully saved");
+		// } else {
+			// notif("error", "Failure", "Map failed to save");
+		// }
+	// });
+// }
 var parse_tile_id = function(id){
 	// e_x_y
 	data = id.split('_');
 	return data;
+}
+var parse_tile_src = function(src) {
+	var img = src.split('/');
+	return '../../../'+img.join('/');
 }
 var parse_inner_element = function(ele){
 	var element_data = new Array();
@@ -296,7 +300,7 @@ var cancel_new_location = function(){
 	$('#start_body').html($('#start_page').html());
 }
 var create_new_location = function(){
-	$.post("editor/ajax/?action=create_location&location_name="+$('#location_name').val(), function(data){
+	$.post("../../../editor/ajax/?action=create_location&location_name="+$('#location_name').val(), function(data){
 		if(data=='success'){
 			window.location = "editor/map/"+$('#location_name').val().toLowerCase();
 		} else if(data=='name_exist'){
