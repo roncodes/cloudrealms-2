@@ -5,8 +5,6 @@ class Dashboard extends MY_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->data = array();
-		$this->set_data();
 	}
 	
 	public function index()
