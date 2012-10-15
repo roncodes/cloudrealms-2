@@ -1,3 +1,4 @@
+<style>body, html { overflow:hidden; }</style>
 <div id="map_tools" class="subnav subnav-fixed map_tools">
     <ul class="nav nav-pills">
 		<li><a style="cursor:pointer;" onclick="open_tiles();">Tiles</a></li>

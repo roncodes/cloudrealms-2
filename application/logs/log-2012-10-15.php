@@ -30,3 +30,51 @@ ERROR - 2012-10-15 19:05:55 --> Severity: Notice  --> mysql_pconnect() [<a href=
  C:\wamp\www\cloudrealms3\system\database\drivers\mysql\mysql_driver.php 91
 ERROR - 2012-10-15 19:11:10 --> Severity: Notice  --> Undefined variable: csrf C:\wamp\www\cloudrealms3\application\views\editor\groups\delete.php 13
 ERROR - 2012-10-15 19:11:37 --> Severity: Notice  --> Undefined variable: csrf C:\wamp\www\cloudrealms3\application\views\editor\groups\delete.php 13
+ERROR - 2012-10-15 19:16:07 --> Severity: Notice  --> Undefined variable: tiles C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 16
+ERROR - 2012-10-15 19:16:07 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 16
+ERROR - 2012-10-15 19:16:07 --> Severity: Notice  --> Undefined variable: tiles C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 26
+ERROR - 2012-10-15 19:16:07 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 26
+ERROR - 2012-10-15 19:16:30 --> Severity: Notice  --> Undefined variable: tiles C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 16
+ERROR - 2012-10-15 19:16:30 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 16
+ERROR - 2012-10-15 19:16:30 --> Severity: Notice  --> Undefined variable: tiles C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 26
+ERROR - 2012-10-15 19:16:30 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 26
+ERROR - 2012-10-15 19:17:28 --> Severity: Notice  --> Undefined variable: tiles C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 17
+ERROR - 2012-10-15 19:17:28 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 17
+ERROR - 2012-10-15 19:17:28 --> Severity: Notice  --> Undefined variable: tiles C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 27
+ERROR - 2012-10-15 19:17:28 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 27
+ERROR - 2012-10-15 20:09:15 --> Severity: Notice  --> Undefined variable: resource C:\wamp\www\cloudrealms3\application\views\editor\resources\index.php 10
+ERROR - 2012-10-15 20:09:15 --> Severity: Notice  --> Undefined variable: resource C:\wamp\www\cloudrealms3\application\views\editor\resources\index.php 11
+ERROR - 2012-10-15 20:09:15 --> Severity: Notice  --> Undefined variable: resource C:\wamp\www\cloudrealms3\application\views\editor\resources\index.php 12
+ERROR - 2012-10-15 20:09:15 --> Severity: Notice  --> Undefined variable: resource C:\wamp\www\cloudrealms3\application\views\editor\resources\index.php 13
+ERROR - 2012-10-15 20:09:15 --> Severity: Notice  --> Undefined variable: resource C:\wamp\www\cloudrealms3\application\views\editor\resources\index.php 14
+ERROR - 2012-10-15 20:09:15 --> Severity: Notice  --> Undefined variable: resource C:\wamp\www\cloudrealms3\application\views\editor\resources\index.php 15
+ERROR - 2012-10-15 20:09:15 --> Severity: Notice  --> Undefined variable: resource C:\wamp\www\cloudrealms3\application\views\editor\resources\index.php 16
+ERROR - 2012-10-15 20:09:15 --> Severity: Notice  --> Undefined variable: resource C:\wamp\www\cloudrealms3\application\views\editor\resources\index.php 17
+ERROR - 2012-10-15 20:09:15 --> Severity: Notice  --> Undefined variable: resource C:\wamp\www\cloudrealms3\application\views\editor\resources\index.php 18
+ERROR - 2012-10-15 20:09:15 --> Severity: Notice  --> Undefined variable: resource C:\wamp\www\cloudrealms3\application\views\editor\resources\index.php 51
+ERROR - 2012-10-15 20:10:16 --> Severity: Notice  --> Undefined variable: resource C:\wamp\www\cloudrealms3\application\controllers\editor\resources.php 12
+ERROR - 2012-10-15 20:10:23 --> 404 Page Not Found --> resources/misc
+ERROR - 2012-10-15 20:10:41 --> 404 Page Not Found --> resources/tiles
+ERROR - 2012-10-15 20:10:49 --> 404 Page Not Found --> resources/tiles
+ERROR - 2012-10-15 20:10:54 --> 404 Page Not Found --> resources/tiles
+ERROR - 2012-10-15 20:12:34 --> Severity: Notice  --> Undefined variable: tiles C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 17
+ERROR - 2012-10-15 20:12:34 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 17
+ERROR - 2012-10-15 20:12:34 --> Severity: Notice  --> Undefined variable: tiles C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 27
+ERROR - 2012-10-15 20:12:34 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 27
+ERROR - 2012-10-15 20:15:22 --> Severity: Notice  --> Undefined variable: resources C:\wamp\www\cloudrealms3\application\views\editor\resources\view.php 52
+ERROR - 2012-10-15 20:15:22 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\resources\view.php 52
+ERROR - 2012-10-15 20:15:25 --> 404 Page Not Found --> resources/video
+ERROR - 2012-10-15 20:16:08 --> Severity: Notice  --> Undefined variable: resources C:\wamp\www\cloudrealms3\application\views\editor\resources\view.php 52
+ERROR - 2012-10-15 20:16:08 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\resources\view.php 52
+ERROR - 2012-10-15 20:16:11 --> Severity: Notice  --> Undefined variable: resources C:\wamp\www\cloudrealms3\application\views\editor\resources\view.php 52
+ERROR - 2012-10-15 20:16:11 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\resources\view.php 52
+ERROR - 2012-10-15 20:16:12 --> Severity: Notice  --> Undefined variable: resources C:\wamp\www\cloudrealms3\application\views\editor\resources\view.php 52
+ERROR - 2012-10-15 20:16:12 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\resources\view.php 52
+ERROR - 2012-10-15 20:16:12 --> Severity: Notice  --> Undefined variable: resources C:\wamp\www\cloudrealms3\application\views\editor\resources\view.php 52
+ERROR - 2012-10-15 20:16:12 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\resources\view.php 52
+ERROR - 2012-10-15 20:16:13 --> Severity: Notice  --> Undefined variable: resources C:\wamp\www\cloudrealms3\application\views\editor\resources\view.php 52
+ERROR - 2012-10-15 20:16:13 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\resources\view.php 52
+ERROR - 2012-10-15 20:16:14 --> Severity: Notice  --> Undefined variable: resources C:\wamp\www\cloudrealms3\application\views\editor\resources\view.php 52
+ERROR - 2012-10-15 20:16:14 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\resources\view.php 52
+ERROR - 2012-10-15 20:16:15 --> Severity: Notice  --> Undefined variable: resources C:\wamp\www\cloudrealms3\application\views\editor\resources\view.php 52
+ERROR - 2012-10-15 20:16:15 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\resources\view.php 52

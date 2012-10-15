@@ -161,7 +161,7 @@ var display_resource_details = function(div){
 	}
 }
 var delete_resource = function(resource, id){
-	$.post("editor/ajax/?action=delete_resource&resource="+resource, function(data){
+	$.post("../../../editor/ajax/?action=delete_resource&resource="+resource, function(data){
 		if(data=='success'){
 			$(id).fadeOut();
 			notif("success", "Success!", "Resource was deleted");

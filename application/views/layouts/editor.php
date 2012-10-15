@@ -67,6 +67,7 @@
 								<li><a style="cursor:pointer;" href="<?=base_url('editor/permissions')?>">Permissions</a></li>
 								<li><a style="cursor:pointer;" href="<?=base_url('editor/users')?>">Users</a></li>
 								<li><a style="cursor:pointer;" href="<?=base_url('editor/groups')?>">Groups</a></li>
+								<li><a style="cursor:pointer;" href="<?=base_url('editor/ui')?>">User Interface</a></li>
 							</ul>
 						</li>
 						<li><a href="<?=base_url()?>">World</a></li>

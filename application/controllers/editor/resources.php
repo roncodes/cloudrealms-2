@@ -7,8 +7,14 @@ class Resources extends MY_Controller {
 		parent::__construct();
 	}
 	
-	public function index()
+	public function index($resource = '')
 	{
-		$this->view = false;
+		$this->data['resource'] = $resource;
+	}
+	
+	public function view($resource = '')
+	{
+		$this->data['resource'] = $resource;
+		$this->data['resources'] = glob("resources/".$resource."/*");
 	}
 }
