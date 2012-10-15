@@ -44,7 +44,7 @@ class Permissions extends MY_Controller {
 	private function _get_controllers($controllers = array())
 	{
 		// Search in the main /controllers/ directory as well as the /admin/ subfolder
-		$dirs = array(APPPATH.'/controllers/', APPPATH.'/controllers/admin/');
+		$dirs = array(APPPATH.'/controllers/', APPPATH.'/controllers/editor/', APPPATH.'/controllers/world/');
 		foreach ($dirs as $dir)
 		{
 			// Find all .php files within the directories
@@ -56,7 +56,7 @@ class Permissions extends MY_Controller {
 			foreach ($controller_files as $filename)
 	        {
 	        	$classname = substr($filename, 0, strrpos($filename, '.'));
-	            $controllers[$classname] = ucwords(str_replace('_', ' ', $classname));
+	            $controllers[$classname] = array(ucwords(str_replace('_', ' ', $classname)), strtolower(basename($dir)));
 	        }
 		}
 

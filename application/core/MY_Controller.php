@@ -12,7 +12,7 @@ class MY_Controller extends CI_Controller {
 		parent::__construct();
 		
 		// Before anything else, check user permissions for this request
-		//$this->_check_permissions();
+		$this->_check_permissions();
 		
 		// Load all site settings
 		$settings = $this->settings->get_settings();

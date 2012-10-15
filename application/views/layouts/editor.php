@@ -60,6 +60,15 @@
 						<li <?php if($page=='players'){ ?> class="active" <? } ?> id="players"><a href="<?=base_url()?>editor/players">Players</a></li>
 						<li <?php if($page=='resources'){ ?> class="active" <? } ?> id="resources"><a href="<?=base_url()?>editor/resources">Resources</a></li>
 						<li class="divider-vertical"></li>
+						<li <?php if($page=='app'){ ?> class="dropdown active" <? } else { ?>class="dropdown"<?php } ?> id="app">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="<?=base_url('editor/app')?>">App<b class="caret"></b></a>
+							<ul class="dropdown-menu" style="z-index:999999;position:absolute;">
+								<li><a style="cursor:pointer;" href="<?=base_url('editor/options')?>">Options</a></li>
+								<li><a style="cursor:pointer;" href="<?=base_url('editor/permissions')?>">Permissions</a></li>
+								<li><a style="cursor:pointer;" href="<?=base_url('editor/users')?>">Users</a></li>
+								<li><a style="cursor:pointer;" href="<?=base_url('editor/groups')?>">Groups</a></li>
+							</ul>
+						</li>
 						<li><a href="<?=base_url()?>">World</a></li>
 						<li><a href="<?=base_url('auth/logout')?>">Logout</a></li>
 					</ul>

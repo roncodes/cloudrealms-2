@@ -10,7 +10,6 @@
 				<label class="radio"><input type="radio" name="confirm" value="no"> No</label>
 			</div>
 		</div>
-		<?=form_hidden($csrf)?>
 		<?=form_hidden(array('id' => $group->id))?>
 		<div class="form-actions">
 			<?=bootstrap_submit('submit', 'Submit', 'class="btn btn-primary"')?>
