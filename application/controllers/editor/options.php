@@ -25,7 +25,7 @@ class Options extends MY_Controller {
 			if ($add_setting === TRUE)
 			{
 				flashmsg('Option created successfully.', 'success');
-				redirect('/admin/options');
+				redirect('/editor/options');
 			}
 			else
 			{
@@ -41,7 +41,7 @@ class Options extends MY_Controller {
 		if (empty($option_name))
 		{
 			flashmsg('You must specify an option to edit.', 'error');
-			redirect('/admin/options');
+			redirect('/editor/options');
 		}
 		
 		$option_name = $this->data['option_name'] = $option_name;
@@ -56,7 +56,7 @@ class Options extends MY_Controller {
 			if ($option_value == $this->input->post('option_value'))
 			{
 				flashmsg('Option edited successfully.', 'success');
-				redirect('/admin/options');
+				redirect('/editor/options');
 			}
 			
 			$edit_setting = $this->settings->edit_setting($option_name, $this->input->post('option_value'));
@@ -64,7 +64,7 @@ class Options extends MY_Controller {
 			if ($edit_setting === TRUE)
 			{
 				flashmsg('Option edited successfully.', 'success');
-				redirect('/admin/options');
+				redirect('/editor/options');
 			}
 			else
 			{

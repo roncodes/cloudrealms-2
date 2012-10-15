@@ -1,0 +1,45 @@
+body, html {
+	overflow:auto;
+	background: #ccc url('http://st.gdefon.ru/wallpapers_original/wallpapers/300485_tes-5_-skyrim_-rpg_1920x1200_(www.GdeFon.ru).jpg') no-repeat;
+	background-size:100%;
+}
+.start-window .container {
+	position:absolute;
+	top:15%;
+	width:100%;
+	/* Fallback for web browsers that doesn't support RGBa */
+	background: rgb(0, 0, 0);
+	/* RGBa with 0.6 opacity */
+	background: rgba(0, 0, 0, 0.6);
+	/* For IE 5.5 - 7*/
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+	/* For IE 8*/
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+	color:#fff;
+	-moz-box-shadow:    inset 0 0 20px #000000;
+	-webkit-box-shadow: inset 0 0 20px #000000;
+	box-shadow:         inset 0 0 20px #000000;
+}
+.start-window .window {
+	position:relative;
+	top:-15%;
+	padding:20px;
+	margin-right:auto;
+	margin-left:auto;
+	width:700px;
+	vertical-align:middle;
+	position:relative;
+	display:block;
+}
+.start-window .outer {
+	height:100%;
+}
+.start-content {
+	display:block;
+	height:200px;
+	width:600px;
+	padding:10px;
+	margin-right:auto;
+	margin-left:auto;
+	overflow:hidden;
+}

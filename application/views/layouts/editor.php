@@ -24,10 +24,10 @@
 	</head>
 	
 	<body>
-	<div class="navbar navbar-fixed-top">
+	<div class="navbar navbar-fixed-top" style="z-index:99999999999999999;">
 		<div class="navbar-inner">
-			<div class="container">
-				<a class="brand" href="#">Cloudrealms v3 Editor</a>
+			<div class="container" style="width:1300px;">
+				<a class="brand" href="#">cloudrealms v3 editor</a>
 				<div class="nav-collapse">
 					<ul class="nav">
 						<li <?php if($page==''||$page=='dashboard'){ ?> class="active" <? } ?> id="dashboard"><a href="<?=base_url('editor')?>">Home</a></li>
