@@ -30,10 +30,6 @@ $(function() {
 			});
 		});
 	}
-	$(".grid_map").scrollview({
-		grab:"images/openhand.cur",
-		grabbing:"images/closedhand.cur"
-	});
 });
 
 /* Global vars */

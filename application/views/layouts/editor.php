@@ -18,9 +18,26 @@
 		<!-- Javascript -->
 		<script type="text/javascript" src="<?=base_url('public/js/jquery.js')?>"></script>
 		<script type="text/javascript" src="<?=base_url('public/js/jquery-ui.js')?>"></script>
+		<script type="text/javascript" src="<?=base_url('public/js/jquery.dataTables.min.js')?>"></script>
+		<script type="text/javascript" src="<?=base_url('public/js/dataTables.bootstrap.js')?>"></script>
 		<script type="text/javascript" src="<?=base_url('public/js/bootstrap.min.js')?>"></script>
 		<script type="text/javascript" src="<?=base_url('public/js/editor.js')?>"></script>
 		<script type="text/javascript" src="<?=base_url('public/js/uploader.js')?>"></script>
+		<script>
+		$(document).ready(function() {
+			$('table').dataTable( {
+				"sDom": "<'row-fluid'<'span6'l><'span6'f>r>t<'row-fluid'<'span6'i><'span6'p>>",
+				"sPaginationType": "bootstrap",
+				"iDisplayLength": 5,
+				"oLanguage": {
+					"sLengthMenu": "_MENU_ records per page"
+				}
+			} );
+			$.extend( $.fn.dataTableExt.oStdClasses, {
+				"sWrapper": "dataTables_wrapper form-inline"
+			} );
+		});
+		</script>
 	</head>
 	
 	<body>
