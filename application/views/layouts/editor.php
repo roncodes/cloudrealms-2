@@ -64,7 +64,7 @@
 							<ul class="dropdown-menu" style="z-index:999999;position:absolute;">
 								<li><a style="cursor:pointer;" href="<?=base_url('editor/options')?>">Options</a></li>
 								<li><a style="cursor:pointer;" href="<?=base_url('editor/permissions')?>">Permissions</a></li>
-								<li><a style="cursor:pointer;" href="<?=base_url('editor/users')?>">Players</a></li>
+								<li><a style="cursor:pointer;" href="<?=base_url('editor/players')?>">Players</a></li>
 								<li><a style="cursor:pointer;" href="<?=base_url('editor/groups')?>">Groups</a></li>
 								<li><a style="cursor:pointer;" href="<?=base_url('editor/ui')?>">User Interface</a></li>
 							</ul>

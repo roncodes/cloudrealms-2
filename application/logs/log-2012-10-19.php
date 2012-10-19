@@ -88,3 +88,11 @@ ERROR - 2012-10-19 21:23:33 --> Severity: Notice  --> Undefined variable: tiles 
 ERROR - 2012-10-19 21:23:33 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 17
 ERROR - 2012-10-19 21:23:33 --> Severity: Notice  --> Undefined variable: tiles C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 27
 ERROR - 2012-10-19 21:23:33 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 27
+ERROR - 2012-10-19 21:57:58 --> 404 Page Not Found --> editor/users
+ERROR - 2012-10-19 21:57:59 --> 404 Page Not Found --> editor/users
+ERROR - 2012-10-19 21:58:00 --> 404 Page Not Found --> editor/users
+ERROR - 2012-10-19 21:58:00 --> 404 Page Not Found --> editor/users
+ERROR - 2012-10-19 21:58:00 --> 404 Page Not Found --> editor/users
+ERROR - 2012-10-19 21:58:01 --> 404 Page Not Found --> editor/users
+ERROR - 2012-10-19 21:58:01 --> 404 Page Not Found --> editor/users
+ERROR - 2012-10-19 21:58:17 --> 404 Page Not Found --> editor/users
