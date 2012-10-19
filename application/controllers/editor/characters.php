@@ -6,12 +6,27 @@ class Characters extends MY_Controller {
 	{
 		parent::__construct();
 		$this->load->model('character_model', 'characters');
+		$this->data['navbar'] = $this->load->view('editor/characters/navbar', null, true);
 	}
 	
 	public function index()
 	{
 		$this->data['characters'] = $this->characters->get_all();
 		$this->data['meta_title'] = 'All Characters';
+	}
+	
+	public function classes()
+	{
+		$this->load->model('class_model', 'classes');
+		$this->data['classes'] = $this->classes->get_all();
+		$this->data['meta_title'] = 'Character Classes';
+	}
+	
+	public function zodiacs()
+	{
+		$this->load->model('zodiac_model', 'zodiacs');
+		$this->data['zodiacs'] = $this->zodiacs->get_all();
+		$this->data['meta_title'] = 'Character Zodiacs';
 	}
 	
 	public function create()

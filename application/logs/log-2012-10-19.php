@@ -99,3 +99,6 @@ ERROR - 2012-10-19 21:58:17 --> 404 Page Not Found --> editor/users
 ERROR - 2012-10-19 22:29:33 --> Query error: Unknown column 'deleted' in 'where clause'
 ERROR - 2012-10-19 22:30:51 --> Severity: Notice  --> Undefined variable: users C:\wamp\www\cloudrealms3\application\views\editor\characters\index.php 20
 ERROR - 2012-10-19 22:30:51 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\characters\index.php 20
+ERROR - 2012-10-19 22:54:47 --> Severity: Notice  --> Undefined variable: classes C:\wamp\www\cloudrealms3\application\views\editor\characters\classes.php 20
+ERROR - 2012-10-19 22:54:47 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\characters\classes.php 20
+ERROR - 2012-10-19 22:56:32 --> Severity: Notice  --> Undefined property: Characters::$classes C:\wamp\www\cloudrealms3\application\controllers\editor\characters.php 21
