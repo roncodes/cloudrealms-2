@@ -1,4 +1,5 @@
 $(function() {
+	/* Initital functions and variables set */
 	isMouseDown = false
     $('body').mousedown(function() {
         isMouseDown = true;
@@ -6,10 +7,6 @@ $(function() {
     .mouseup(function() {
         isMouseDown = false;
     });
-	var map_width = screen.availWidth;
-	var map_height = screen.availHeight;
-	var tile_width = map_width/40;
-	var tile_height = map_height/23;
 	var map_tools_open = 0;
 	$('.dropdown-toggle').dropdown();
 	$("#map_ground").fadeTo("slow", 0.33);
@@ -31,16 +28,19 @@ $(function() {
 			resource_type: $('#resource_type').val()
 		});
 	});
+	
 });
-/* Global vars not onload */
+
+/* Global vars */
 var selected_tile = null;
 var tiles_open = 0;
-var grid_x = 40;
-var grid_y = 23;
+var grid_x = 40; // The amount of tiles n the x grid :: I wouldn't change
+var grid_y = 40; // The amount of tiles on the y grid :: I wouldn't change
 var layer = 'environment';
-var tile_width = Math.round(screen.availWidth/40);
-var tile_height = Math.round(screen.availHeight/23);
-var lcation;
+var tile_width = 32; // Set the width of your tiles
+var tile_height = 32; // Set the width of your tiles
+var location;
+	
 var parse_tile = function(tile){
 	if(tile!=null){
 		tile = tile.replace('{', '');
@@ -50,6 +50,11 @@ var parse_tile = function(tile){
 	return tile;
 }
 var load_map_ground = function(location){
+	/* Set map size */
+	$('.map_grid').css('margin-left', '-'+(tile_width*(grid_x+2))/2+'px');
+	$('.map_grid').css('width', tile_width*(grid_x+2)+'px');
+	$('.map_grid').css('margin-top', '-'+($('.map_grid').height()/2)+'px');
+	/* Get map data from server */
 	$.post("../../../editor/ajax/?action=get_ground&location="+location, function(data){
 		var loc = "'"+location+"'";
 		id = 0;
@@ -58,21 +63,20 @@ var load_map_ground = function(location){
 			for(i=0;i<grid_x;i++){
 				for(j=0;j<grid_y;j++){
 					tile = parse_tile(data[id]);
+					if(tile[3]==undefined) { continue; }
 					if(tile[3]!='tilesheet'){
 						// MATH TIME!
 						var stretch_width;
 						var stretch_height;
 						var img = new Image();
-						img.onload = function() {
-							// alert(this.width + 'x' + this.height);
+						img.onload = function(tile) {
 							columns = this.width/tile[6];
 							rows = this.height/tile[6];
 							stretch_width = columns*tile_width;
 							stretch_height = rows*tile_height;
-							// alert(stretch_width+' x '+stretch_height);
 						}
 						img.src = parse_tile_src(tile[3]);
-						$('#map_ground').append('<div id="g_'+i+'_'+j+'" onmousedown="set_tile_click('+id+', '+loc+', this);" onmouseover="set_tile('+id+', '+loc+', this);" class="ground_tile" style="width:'+tile_width+'px;height:'+tile_height+'px;"><div style="background:url('+parse_tile_src(tile[3])+');background-position:-'+tile[4]+'px -'+tile[5]+'px;height:'+tile[6]+'px;width:'+tile[6]+'px;background-size:'+stretch_width+'px '+stretch_height+'px;"></div></div>');
+						$('#map_ground').append('<div id="g_'+i+'_'+j+'" onmousedown="set_tile_click('+id+', '+loc+', this);" onmouseover="set_tile('+id+', '+loc+', this);" class="ground_tile" style="width:'+tile_width+'px;height:'+tile_height+'px;"><div style="background:url('+parse_tile_src(tile[3])+');background-position:-'+tile[4]+'px -'+tile[5]+'px;height:'+tile_height+'px;width:'+tile_width+'px;background-size:'+stretch_width+'px '+stretch_height+'px;"></div></div>');
 					} else {
 						$('#map_ground').append('<div id="g_'+i+'_'+j+'" onmousedown="set_tile_click('+id+', '+loc+', this);" onmouseover="set_tile('+id+', '+loc+', this);" class="ground_tile" style="width:'+tile_width+'px;height:'+tile_height+'px;"></div>');
 					}
@@ -90,6 +94,7 @@ var load_map_ground = function(location){
 	});
 }
 var load_map_environment = function(location){
+	/* Load environment from server */
 	$.post("../../../editor/ajax/?action=get_environment&location="+location, function(data){
 		var loc = "'"+location+"'";
 		id = 0;
@@ -98,21 +103,20 @@ var load_map_environment = function(location){
 			for(i=0;i<grid_x;i++){
 				for(j=0;j<grid_y;j++){
 					tile = parse_tile(data[id]);
+					if(tile[3]==undefined) { continue; }
 					if(tile[3]!='tilesheet'){
-						// MATH TIME!
-						var stretch_width;
-						var stretch_height;
+						/* Adjust tile image accordingly */
 						var img = new Image();
-						img.onload = function() {
-							// alert(this.width + 'x' + this.height);
+						img.onload = function(tile) {
+							console.log(tile[6]);
 							columns = this.width/tile[6];
 							rows = this.height/tile[6];
-							stretch_width = columns*tile_width;
-							stretch_height = rows*tile_height;
-							// alert(stretch_width+' x '+stretch_height);
+							var stretch_width = columns*tile_width;
+							var stretch_height = rows*tile_height;
+							//console.log(stretch_width+' vs '+stretch_height);
 						}
 						img.src = parse_tile_src(tile[3]);
-						$('#map_environment').append('<div id="e_'+i+'_'+j+'" onmousedown="set_tile_click('+id+', '+loc+', this);" onmouseover="set_tile('+id+', '+loc+', this);" class="environment_tile" style="width:'+tile_width+'px;height:'+tile_height+'px;"><div style="background:url('+parse_tile_src(tile[3])+');background-position:-'+tile[4]+'px -'+tile[5]+'px;height:'+tile[6]+'px;width:'+tile[6]+'px;"></div></div>');
+						$('#map_environment').append('<div id="e_'+i+'_'+j+'" onmousedown="set_tile_click('+id+', '+loc+', this);" onmouseover="set_tile('+id+', '+loc+', this);" class="environment_tile" style="width:'+tile_width+'px;height:'+tile_height+'px;"><div style="background:url('+parse_tile_src(tile[3])+');background-position:-'+tile[4]+'px -'+tile[5]+'px;height:'+tile_height+'px;width:'+tile_width+'px;"></div></div>');
 					} else {
 						$('#map_environment').append('<div id="e_'+i+'_'+j+'" onmousedown="set_tile_click('+id+', '+loc+', this);" onmouseover="set_tile('+id+', '+loc+', this);" class="environment_tile" style="width:'+tile_width+'px;height:'+tile_height+'px;"></div>');
 					}

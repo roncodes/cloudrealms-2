@@ -19,10 +19,8 @@ body, html {
 .map_grid {
 	display:block;
 	position:absolute;
-	left:0;
-	top:0;
-	margin-top:40px;
-	width:100%;
+	left:50%;
+	top:50%;
 	height:100%;
 	overflow:hidden;
 }
@@ -54,7 +52,7 @@ body, html {
 	float:left;
 	background:#1DF577;
 	cursor:pointer;
-	overflow:none;
+	overflow:hidden;
 }
 .ground_tile:hover {
 	background:#12C95F;
@@ -65,7 +63,7 @@ body, html {
 	display:block;
 	float:left;
 	cursor:pointer;
-	overflow:none;
+	overflow:hidden;
 }
 .environment_tile:hover {
 	background:#E01B98;

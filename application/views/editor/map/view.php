@@ -43,10 +43,5 @@
 <script>
 load_map_ground('<?php echo $location; ?>');
 load_map_environment('<?php echo $location; ?>');
-<?php if($new_map){ ?>
-setTimeout("first_save('<?php echo $location; ?>')", 1200);
-<?php } else { ?>
-setTimeout("save_map('<?php echo $location; ?>')", 1200);
-<?php } ?>
 </script>
 
