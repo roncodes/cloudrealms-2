@@ -11,31 +11,36 @@ $(function() {
 	$('.dropdown-toggle').dropdown();
 	$("#map_ground").fadeTo("slow", 0.33);
 	$("#tiles").css('margin-right', -($("#tiles").width()+10));
-	var uploader = new qq.FileUploader({
-		element: document.getElementById('uploader'),
-		action: '../../../uploader/upload_resources',
-		sizeLimit: 6789504,
-		params: {'resource_type': $('#resource_type').val()},
-		allowedExtensions: ['png', 'jpg', 'gif', 'mp3', 'ogg', 'flv', 'mov', 'wmv'],
-		debug: true,
-		onComplete: function(id, fileName, responseJSON){
-			notif("info", "Update!", "Resource library has been modified");
-			setTimeout('location.reload()', 1000);
-		}
-	}); 
-	$('#resource_type').change(function() {
-		uploader.setParams({
-			resource_type: $('#resource_type').val()
+	if($('#uploader').length!=0){
+		var uploader = new qq.FileUploader({
+			element: document.getElementById('uploader'),
+			action: '../../../uploader/upload_resources',
+			sizeLimit: 6789504,
+			params: {'resource_type': $('#resource_type').val()},
+			allowedExtensions: ['png', 'jpg', 'gif', 'mp3', 'ogg', 'flv', 'mov', 'wmv'],
+			debug: true,
+			onComplete: function(id, fileName, responseJSON){
+				notif("info", "Update!", "Resource library has been modified");
+				setTimeout('location.reload()', 1000);
+			}
+		}); 
+		$('#resource_type').change(function() {
+			uploader.setParams({
+				resource_type: $('#resource_type').val()
+			});
 		});
+	}
+	$(".grid_map").scrollview({
+		grab:"images/openhand.cur",
+		grabbing:"images/closedhand.cur"
 	});
-	
 });
 
 /* Global vars */
 var selected_tile = null;
 var tiles_open = 0;
-var grid_x = 40; // The amount of tiles n the x grid :: I wouldn't change
-var grid_y = 40; // The amount of tiles on the y grid :: I wouldn't change
+var grid_x = 45; // The amount of tiles n the x grid :: I wouldn't change
+var grid_y = 45; // The amount of tiles on the y grid :: I wouldn't change
 var layer = 'environment';
 var tile_width = 32; // Set the width of your tiles
 var tile_height = 32; // Set the width of your tiles
@@ -51,9 +56,10 @@ var parse_tile = function(tile){
 }
 var load_map_ground = function(location){
 	/* Set map size */
-	$('.map_grid').css('margin-left', '-'+(tile_width*(grid_x+2))/2+'px');
-	$('.map_grid').css('width', tile_width*(grid_x+2)+'px');
-	$('.map_grid').css('margin-top', '-'+($('.map_grid').height()/2)+'px');
+	$('.map_grid').css({
+		//'margin-left' : '-'+$(this).width()/2+'px',
+		//'margin-top' : '-'+$(this).height()/2+'px',
+	});
 	/* Get map data from server */
 	$.post("../../../editor/ajax/?action=get_ground&location="+location, function(data){
 		var loc = "'"+location+"'";
@@ -63,7 +69,7 @@ var load_map_ground = function(location){
 			for(i=0;i<grid_x;i++){
 				for(j=0;j<grid_y;j++){
 					tile = parse_tile(data[id]);
-					if(tile[3]==undefined) { continue; }
+					if(tile==undefined) { continue; }
 					if(tile[3]!='tilesheet'){
 						// MATH TIME!
 						var stretch_width;
@@ -103,12 +109,12 @@ var load_map_environment = function(location){
 			for(i=0;i<grid_x;i++){
 				for(j=0;j<grid_y;j++){
 					tile = parse_tile(data[id]);
-					if(tile[3]==undefined) { continue; }
+					if(tile==undefined) { continue; }
 					if(tile[3]!='tilesheet'){
 						/* Adjust tile image accordingly */
 						var img = new Image();
 						img.onload = function(tile) {
-							console.log(tile[6]);
+							// console.log(tile[6]);
 							columns = this.width/tile[6];
 							rows = this.height/tile[6];
 							var stretch_width = columns*tile_width;
@@ -304,9 +310,11 @@ var cancel_new_location = function(){
 	$('#start_body').html($('#start_page').html());
 }
 var create_new_location = function(){
-	$.post("../../../editor/ajax/?action=create_location&location_name="+$('#location_name').val(), function(data){
+	console.log('triggered!');
+	$.post("../editor/ajax/?action=create_location&location_name="+$('#location_name').val(), function(data){
+		console.log(data);
 		if(data=='success'){
-			window.location = "editor/map/"+$('#location_name').val().toLowerCase();
+			window.location = "map/view/"+$('#location_name').val().toLowerCase();
 		} else if(data=='name_exist'){
 			notif("error", "Failure", "Location name already exist");
 		} else {

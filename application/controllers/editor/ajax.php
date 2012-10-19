@@ -78,4 +78,16 @@ class Ajax extends MY_Controller {
 		}
 	}
 	
+	public function location_name_available($location)
+	{
+		$this->load->database();
+		$query = $this->db->query("SELECT * FROM locations");
+		foreach ($query->result() as $row){
+			if($location==$row->name){
+				return false;
+			}
+		}
+		return true;
+	}
+	
 }

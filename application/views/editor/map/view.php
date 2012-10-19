@@ -4,8 +4,10 @@
 		<li><a style="cursor:pointer;" onclick="open_tiles();">Tiles</a></li>
     </ul>
 </div>
-<div id="map_environment" class="map_grid"></div>
-<div id="map_ground" class="map_grid"></div>
+<div id="map">
+	<div id="map_environment" class="map_grid"></div>
+	<div id="map_ground" class="map_grid"></div>
+</div>
 <div class="cmodal tiles-box" id="tiles">
 	<div class="modal-header">
 		<a class="close" onclick="close_tiles();" data-dismiss="modal"><i class="icon-remove"></i></a>

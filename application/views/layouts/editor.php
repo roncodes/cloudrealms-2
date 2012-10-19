@@ -51,13 +51,12 @@
 								<?php } ?>
 							</ul>
 						</li>
-						<li <?php if($page=='locations'){ ?> class="active" <? } ?> id="locations"><a href="<?=base_url()?>editor/locations">Locations</a></li>
+						<li <?php if($page=='world-map'){ ?> class="active" <? } ?> id="locations"><a href="<?=base_url()?>editor/world-map">World Map</a></li>
 						<li <?php if($page=='items'){ ?> class="active" <? } ?> id="items"><a href="<?=base_url()?>editor/items">Items</a></li>
 						<li <?php if($page=='creatures'){ ?> class="active" <? } ?> id="creatures"><a href="<?=base_url()?>editor/creatures">Creatures</a></li>
 						<li <?php if($page=='books'){ ?> class="active" <? } ?> id="books"><a href="<?=base_url()?>editor/books">Books</a></li>
 						<li <?php if($page=='quests'){ ?> class="active" <? } ?> id="quests"><a href="<?=base_url()?>editor/quests">Quests</a></li>
 						<li <?php if($page=='characters'){ ?> class="active" <? } ?> id="characters"><a href="<?=base_url()?>editor/characters">Characters</a></li>
-						<li <?php if($page=='players'){ ?> class="active" <? } ?> id="players"><a href="<?=base_url()?>editor/players">Players</a></li>
 						<li <?php if($page=='resources'){ ?> class="active" <? } ?> id="resources"><a href="<?=base_url()?>editor/resources">Resources</a></li>
 						<li class="divider-vertical"></li>
 						<li <?php if($page=='app'){ ?> class="dropdown active" <? } else { ?>class="dropdown"<?php } ?> id="app">
@@ -65,7 +64,7 @@
 							<ul class="dropdown-menu" style="z-index:999999;position:absolute;">
 								<li><a style="cursor:pointer;" href="<?=base_url('editor/options')?>">Options</a></li>
 								<li><a style="cursor:pointer;" href="<?=base_url('editor/permissions')?>">Permissions</a></li>
-								<li><a style="cursor:pointer;" href="<?=base_url('editor/users')?>">Users</a></li>
+								<li><a style="cursor:pointer;" href="<?=base_url('editor/users')?>">Players</a></li>
 								<li><a style="cursor:pointer;" href="<?=base_url('editor/groups')?>">Groups</a></li>
 								<li><a style="cursor:pointer;" href="<?=base_url('editor/ui')?>">User Interface</a></li>
 							</ul>
