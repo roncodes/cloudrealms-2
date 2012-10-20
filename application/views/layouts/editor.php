@@ -48,7 +48,8 @@
 				<div class="nav-collapse">
 					<ul class="nav">
 						<li <?php if($page==''||$page=='dashboard'){ ?> class="active" <? } ?> id="dashboard"><a href="<?=base_url('editor')?>">Home</a></li>
-						<li <?php if($page=='map'){ ?> class="dropdown active" <? } else { ?>class="dropdown"<?php } ?> id="map_editor">
+						<?php if($page=='map'){ ?>
+						<li class="dropdown active" id="map_editor">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="<?=base_url('editor/map')?>">Map Editor<b class="caret"></b></a>
 							<ul class="dropdown-menu" style="z-index:999999;position:absolute;">
 								<?php if($page=='map'){ ?>
@@ -68,6 +69,9 @@
 								<?php } ?>
 							</ul>
 						</li>
+						<?php } else { ?>
+						<li <?php if($page=='map'){ ?> class="active" <? } ?> id="map_editor"><a href="<?=base_url('editor/map')?>">Map Editor</a></li>
+						<?php } ?>
 						<li <?php if($page=='world-map'){ ?> class="active" <? } ?> id="locations"><a href="<?=base_url()?>editor/world-map">World Map</a></li>
 						<li <?php if($page=='items'){ ?> class="active" <? } ?> id="items"><a href="<?=base_url()?>editor/items">Items</a></li>
 						<li <?php if($page=='creatures'){ ?> class="active" <? } ?> id="creatures"><a href="<?=base_url()?>editor/creatures">Creatures</a></li>
