@@ -1,20 +1,24 @@
 <div class="pane">
 	<div class="page-header">
-		<h1>Create User</h1>
+		<h1>Create Character</h1>
 	</div>
 	<?=form_open(current_url(), 'class="form-horizontal"')?>
-		<?=bootstrap_input('username', 'Username')?>
-		<?=bootstrap_input('first_name', 'First Name')?>
-		<?=bootstrap_input('last_name', 'Last Name')?>
-		<?=bootstrap_input('email', 'Email')?>
-		<?=bootstrap_input('company', 'Company')?>
-		<?=bootstrap_input('phone', 'Phone')?>
-		<?=bootstrap_password('password', 'Password')?>
-		<?=bootstrap_password('password_confirm', 'Confirm Password')?>
-		<?=bootstrap_dropdown('group_id', 'Group', $groups)?>
+		<?=bootstrap_dropdown('player_id', 'Player', $users)?>
+		<?=bootstrap_input('name', 'Name')?>
+		<?=bootstrap_input('level', 'Level')?>
+		<?=bootstrap_input('gold', 'Gold')?>
+		<?=bootstrap_input('skill_points', 'Skill Points')?>
+		<?=bootstrap_input('attack', 'Attack Points')?>
+		<?=bootstrap_input('defense', 'Defense Points')?>
+		<?=bootstrap_dropdown('zodiac', 'Zodiac', $zodiacs)?>
+		<?=bootstrap_input('avatar', 'Avatar')?>
+		<?=bootstrap_input('face', 'Face')?>
+		<?=bootstrap_dropdown('martial_status', 'Martial Status', $characters)?>
+		<?=bootstrap_dropdown('class', 'Class', $classes)?>
+		<?=bootstrap_dropdown('gender', 'Gender', array('Male', 'Female'))?>
 		<div class="form-actions">
-			<?=bootstrap_submit('submit', 'Create User', 'class="btn btn-primary"')?>
-			<a href="<?=base_url('editor/users')?>" class="btn">Cancel</a>
+			<?=bootstrap_submit('submit', 'Create Character', 'class="btn btn-primary"')?>
+			<a href="<?=base_url('editor/characters')?>" class="btn">Cancel</a>
 		</div>
 	<?=form_close()?>
 </div>

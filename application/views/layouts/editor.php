@@ -98,6 +98,18 @@
 		</div>
 	</div>
 	<div class="container">
+		<?php 
+		if ( ! empty($folder_name))
+		{
+			if (file_exists(APPPATH.'views/editor/'.$folder_name.'/subnav.php'))
+			{
+				echo '<div class="subnav"><ul class="nav nav-pills">';
+				$this->load->view('editor/'.$folder_name.'/subnav.php', true);
+				echo '</ul></div>';
+			}
+		}
+		?>
+		<?php echo showflashmsg(); ?>
 		<?=$yield?>
 	</div> <!-- /container -->
 	</body>
