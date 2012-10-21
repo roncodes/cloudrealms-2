@@ -45,5 +45,8 @@
 <script>
 load_map_ground('<?php echo $location; ?>');
 load_map_environment('<?php echo $location; ?>');
+<?php if($new_map){ ?>
+first_save('<?php echo $location; ?>');
+<?php } ?>
 </script>
 

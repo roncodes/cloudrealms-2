@@ -206,6 +206,7 @@ var set_tile = function(id, location, tile){
 	}
 }
 var set_tile_click = function(id, location, tile){
+	// console.log(id);
 	if(selected_tile!=null){
 		$.post("../../../editor/ajax/?action=set_tile&tilesheet="+selected_tile[0]+"&offx="+selected_tile[1]+"&offy="+selected_tile[2]+"&id="+id+"&layer="+layer+"&location="+location+"&size="+selected_tile[3], function(data){
 			if(data=='success'){
@@ -262,25 +263,27 @@ var close_notif = function(){
 		// }
 	// });
 // }
-// var first_save = function(location){
-	// var ground_map = '';
-	// var environment_map = '';
-	// $(".ground_tile").each(function(i) {
-		// tile_data = parse_tile_id($(this).attr('id'));
-		// ground_map += '{'+i+'|'+tile_data[1]+'|'+tile_data[2]+'|tilesheet|xoff|yoff|size},';
-	// });
-	// $(".environment_tile").each(function(i) {
-		// tile_data = parse_tile_id($(this).attr('id'));
-		// environment_map += '{'+i+'|'+tile_data[1]+'|'+tile_data[2]+'|tilesheet|xoff|yoff|size},';
-	// });
-	// $.post("../../../editor/ajax/?action=save_map", {ground_map: ground_map, environment_map: environment_map, location: location}, function(data){
-		// if(data=='success'){
-			// notif("success", "Map Saved", "Map has been successfully saved");
-		// } else {
-			// notif("error", "Failure", "Map failed to save");
-		// }
-	// });
-// }
+var first_save = function(location){
+	var ground_map = '';
+	var environment_map = '';
+	setTimeout(function() {
+		$(".ground_tile").each(function(i) {
+			tile_data = parse_tile_id($(this).attr('id'));
+			ground_map += '{'+i+'|'+tile_data[1]+'|'+tile_data[2]+'|tilesheet|xoff|yoff|size},';
+		});
+		$(".environment_tile").each(function(i) {
+			tile_data = parse_tile_id($(this).attr('id'));
+			environment_map += '{'+i+'|'+tile_data[1]+'|'+tile_data[2]+'|tilesheet|xoff|yoff|size},';
+		});
+		$.post("../../../editor/ajax/?action=save_map", {ground_map: ground_map, environment_map: environment_map, location: location}, function(data){
+			if(data=='success'){
+				notif("success", "Map Saved", "Map created and saved to database");
+			} else {
+				notif("error", "Failure", "Map failed to save");
+			}
+		});
+	}, 3000);
+}
 var parse_tile_id = function(id){
 	// e_x_y
 	data = id.split('_');
