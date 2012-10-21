@@ -19,8 +19,8 @@
 				<td><?=$zodiac->description?></td>
 				<td><?=$zodiac->attributes?></td>
 				<td>
-					<a href="<?=base_url('editor/zodiacs/classes/edit/'.$zodiac->id)?>"><i class="icon-pencil"></i></a>
-					<a href="<?=base_url('editor/zodiacs/classes/delete/'.$zodiac->id)?>"><i class="icon-trash"></i></a>
+					<a href="<?=base_url('editor/characters/zodiacs/edit/'.$zodiac->id)?>"><i class="icon-pencil"></i></a>
+					<a href="<?=base_url('editor/characters/zodiacs/delete/'.$zodiac->id)?>"><i class="icon-trash"></i></a>
 				</td>
 			</tr>
 		<?php endforeach; ?>

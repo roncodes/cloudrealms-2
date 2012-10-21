@@ -18,14 +18,180 @@ class Characters extends MY_Controller {
 		$this->data['meta_title'] = 'All Characters';
 	}
 	
-	public function classes()
+	public function classes($action = NULL, $id = NULL)
 	{
+		if($action=='create') {
+			/**
+				CREATE CLASS
+			**/
+			$this->form_validation->set_rules('name', 'Name', 'required|trim|xss_clean');
+			$this->form_validation->set_rules('description', 'Description', 'required|trim|xss_clean');
+			
+			if ($this->form_validation->run() == TRUE && $this->classes->insert(array(
+																					'name' => $this->input->post('name'),
+																					'description' => $this->input->post('description'),
+																					'attributes' => $this->_parse_attributes($_POST))))
+			{
+				// Creating the attr was successful, redirect them back to the admin page
+				flashmsg('Class created successfully.', 'success');
+				redirect('/editor/characters/classes');
+			}
+			$this->view = 'editor/characters/create_class';
+			
+		} else if($action=='edit') {
+			/**
+				EDIT CLASS
+			**/
+			$class = $this->data['class'] = $this->classes->get($id);
+			if (empty($id) || empty($class))
+			{
+				flashmsg('You must specify a class to edit.', 'error');
+				redirect('/editor/characters/classes');
+			}
+			$this->form_validation->set_rules('name', 'Name', 'required|trim|xss_clean');
+			$this->form_validation->set_rules('description', 'Description', 'required|trim|xss_clean');
+			
+			if ($this->form_validation->run() == TRUE && $this->classes->update($id, array(
+																					'name' => $this->input->post('name'),
+																					'description' => $this->input->post('description'),
+																					'attributes' => $this->_parse_attributes($_POST))))
+			{
+				// Editing the class was successful, redirect them back to the admin page
+				flashmsg('Class has been updated successfully.', 'success');
+				redirect('/editor/characters/classes');
+			}
+			$this->view = 'editor/characters/edit_class';
+		} else if($action=='delete') {
+			/**
+				DELETE ATTRIBUTE
+			**/
+			$class = $this->data['class'] = $this->classes->get($id);
+			if (empty($id) || empty($class))
+			{
+				flashmsg('You must specify a class to delete.', 'error');
+				redirect('/editor/characters/classes');
+			}
+			$this->form_validation->set_rules('confirm', 'confirmation', 'required');
+			$this->form_validation->set_rules('id', 'attribute ID', 'required|is_natural');
+			if ($this->form_validation->run() === TRUE)
+			{
+				// Do we really want to delete?
+				if ($this->input->post('confirm') == 'yes')
+				{
+					// Do we have a valid request?
+					if ($this->_valid_csrf_nonce() === FALSE || $id != $this->input->post('id'))
+					{
+						show_404();
+					}
+
+					// Do we have the right userlevel?
+					if ($this->ion_auth->logged_in() && $this->ion_auth->is_admin())
+					{
+						$this->classes->delete($id);
+					}
+					
+					// Redirect them back to the admin page
+					flashmsg('Class deleted successfully.', 'success');
+					redirect('/editor/characters/classes');
+				}
+				else
+				{
+					redirect('/editor/characters/classes');
+				}
+			}
+			$this->data['csrf'] = $this->_get_csrf_nonce();
+			$this->view = 'editor/characters/delete_class';
+		}
+		$this->data['attributes'] = $this->attributes->get_all();
 		$this->data['classes'] = $this->classes->get_all();
 		$this->data['meta_title'] = 'Character Classes';
 	}
 	
-	public function zodiacs()
+	public function zodiacs($action = NULL, $id = NULL)
 	{
+		if($action=='create') {
+			/**
+				CREATE ZODIAC
+			**/
+			$this->form_validation->set_rules('name', 'Name', 'required|trim|xss_clean');
+			$this->form_validation->set_rules('description', 'Description', 'required|trim|xss_clean');
+			
+			if ($this->form_validation->run() == TRUE && $this->zodiacs->insert(array(
+																					'name' => $this->input->post('name'),
+																					'description' => $this->input->post('description'),
+																					'attributes' => $this->_parse_attributes($_POST))))
+			{
+				// Creating the attr was successful, redirect them back to the admin page
+				flashmsg('Zodiac created successfully.', 'success');
+				redirect('/editor/characters/zodiacs');
+			}
+			$this->view = 'editor/characters/create_zodiac';
+			
+		} else if($action=='edit') {
+			/**
+				EDIT ZODIAC
+			**/
+			$zodiac = $this->data['zodiac'] = $this->zodiacs->get($id);
+			if (empty($id) || empty($zodiac))
+			{
+				flashmsg('You must specify a zodiac to edit.', 'error');
+				redirect('/editor/characters/zodiacs');
+			}
+			$this->form_validation->set_rules('name', 'Name', 'required|trim|xss_clean');
+			$this->form_validation->set_rules('description', 'Description', 'required|trim|xss_clean');
+			
+			if ($this->form_validation->run() == TRUE && $this->zodiacs->update($id, array(
+																					'name' => $this->input->post('name'),
+																					'description' => $this->input->post('description'),
+																					'attributes' => $this->_parse_attributes($_POST))))
+			{
+				// Editing the zodiac was successful, redirect them back to the admin page
+				flashmsg('Zodiac has been updated successfully.', 'success');
+				redirect('/editor/characters/zodiacs');
+			}
+			$this->view = 'editor/characters/edit_zodiac';
+		} else if($action=='delete') {
+			/**
+				DELETE ZODIAC
+			**/
+			$zodiac = $this->data['zodiac'] = $this->zodiacs->get($id);
+			if (empty($id) || empty($zodiac))
+			{
+				flashmsg('You must specify a zodiac to delete.', 'error');
+				redirect('/editor/characters/zodiacs');
+			}
+			$this->form_validation->set_rules('confirm', 'confirmation', 'required');
+			$this->form_validation->set_rules('id', 'attribute ID', 'required|is_natural');
+			if ($this->form_validation->run() === TRUE)
+			{
+				// Do we really want to delete?
+				if ($this->input->post('confirm') == 'yes')
+				{
+					// Do we have a valid request?
+					if ($this->_valid_csrf_nonce() === FALSE || $id != $this->input->post('id'))
+					{
+						show_404();
+					}
+
+					// Do we have the right userlevel?
+					if ($this->ion_auth->logged_in() && $this->ion_auth->is_admin())
+					{
+						$this->zodiacs->delete($id);
+					}
+					
+					// Redirect them back to the admin page
+					flashmsg('Zodiac deleted successfully.', 'success');
+					redirect('/editor/characters/zodiacs');
+				}
+				else
+				{
+					redirect('/editor/characters/zodiacs');
+				}
+			}
+			$this->data['csrf'] = $this->_get_csrf_nonce();
+			$this->view = 'editor/characters/delete_zodiac';
+		}
+		$this->data['attributes'] = $this->attributes->get_all();
 		$this->data['zodiacs'] = $this->zodiacs->get_all();
 		$this->data['meta_title'] = 'Character Zodiacs';
 	}
@@ -308,6 +474,16 @@ class Characters extends MY_Controller {
 		// Insert csrf check
 		$this->data['csrf'] = $this->_get_csrf_nonce();
 		$this->data['meta_title'] = 'Deactivate User';
+	}
+	
+	private function _parse_attributes($arr, $attributes = array())
+	{
+		foreach($arr as $key => $value){
+			if(strlen($key)==3){
+				$attributes[$key] = $value;
+			}
+		}
+		return json_encode($attributes);
 	}
 
 }
