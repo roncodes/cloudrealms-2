@@ -17,15 +17,20 @@
 			</tr>
 		</thead>
 		<tbody>
-		<?php foreach ($characters as $character): ?>
+		<?php 
+			foreach ($characters as $character): 
+			$player = $this->ion_auth->get_user($character->player_id);
+			$class = $this->classes->get($character->class);
+			$zodiac = $this->zodiacs->get($character->zodiac);
+		?>
 			<tr>
-				<td><?=$character->user_id?></td>
+				<td><?=$player->username?></td>
 				<td><?=$character->name?></td>
 				<td><?=$character->level?></td>
 				<td><?=$character->gold?></td>
-				<td><?=$character->class?></td>
+				<td><?=$class->name?></td>
 				<td><?=$character->gender?></td>
-				<td><?=$character->zodiac?></td>
+				<td><?=$zodiac->name?></td>
 				<td>
 					<a href="<?=base_url('editor/characters/edit/'.$character->id)?>"><i class="icon-pencil"></i></a>
 					<a href="<?=base_url('editor/characters/delete/'.$character->id)?>"><i class="icon-trash"></i></a>

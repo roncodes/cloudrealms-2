@@ -6,6 +6,7 @@
 		<?=bootstrap_dropdown('player_id', 'Player', $users)?>
 		<?=bootstrap_input('name', 'Name')?>
 		<?=bootstrap_input('level', 'Level')?>
+		<?=bootstrap_dropdown('home', 'Home', $locations)?>
 		<?=bootstrap_input('gold', 'Gold')?>
 		<?=bootstrap_input('skill_points', 'Skill Points')?>
 		<?=bootstrap_input('attack', 'Attack Points')?>

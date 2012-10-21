@@ -61,3 +61,36 @@ ERROR - 2012-10-21 00:41:49 --> Severity: Notice  --> Undefined variable: update
 ERROR - 2012-10-21 00:42:36 --> Severity: Notice  --> Undefined variable: updated_tile C:\wamp\www\cloudrealms3\application\controllers\editor\ajax.php 61
 ERROR - 2012-10-21 00:43:09 --> Severity: Notice  --> Undefined variable: updated_tile C:\wamp\www\cloudrealms3\application\controllers\editor\ajax.php 61
 ERROR - 2012-10-21 00:45:53 --> Severity: Notice  --> Undefined variable: updated_tile C:\wamp\www\cloudrealms3\application\controllers\editor\ajax.php 61
+ERROR - 2012-10-21 00:56:38 --> Severity: Notice  --> Undefined variable: tiles C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 17
+ERROR - 2012-10-21 00:56:38 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 17
+ERROR - 2012-10-21 00:56:38 --> Severity: Notice  --> Undefined variable: tiles C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 27
+ERROR - 2012-10-21 00:56:38 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 27
+ERROR - 2012-10-21 00:57:42 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-21 00:58:55 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-21 00:58:55 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-21 00:58:56 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-21 00:59:03 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-21 00:59:03 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-21 00:59:03 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-21 00:59:04 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-21 01:07:20 --> Query error: Unknown column 'deleted' in 'where clause'
+ERROR - 2012-10-21 01:08:03 --> Severity: Notice  --> Undefined variable: tiles C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 17
+ERROR - 2012-10-21 01:08:03 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 17
+ERROR - 2012-10-21 01:08:03 --> Severity: Notice  --> Undefined variable: tiles C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 27
+ERROR - 2012-10-21 01:08:03 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 27
+ERROR - 2012-10-21 01:08:24 --> Severity: Notice  --> Undefined variable: tiles C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 17
+ERROR - 2012-10-21 01:08:24 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 17
+ERROR - 2012-10-21 01:08:24 --> Severity: Notice  --> Undefined variable: tiles C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 27
+ERROR - 2012-10-21 01:08:24 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 27
+ERROR - 2012-10-21 01:10:09 --> Severity: Notice  --> Undefined variable: tiles C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 17
+ERROR - 2012-10-21 01:10:09 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 17
+ERROR - 2012-10-21 01:10:09 --> Severity: Notice  --> Undefined variable: tiles C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 27
+ERROR - 2012-10-21 01:10:09 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 27
+ERROR - 2012-10-21 01:13:12 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-21 01:14:49 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-21 01:15:09 --> Query error: Unknown column 'environment_layer_map' in 'field list'
+ERROR - 2012-10-21 01:15:13 --> Query error: Unknown column 'environment_layer_map' in 'field list'
+ERROR - 2012-10-21 01:15:13 --> Query error: Unknown column 'environment_layer_map' in 'field list'
+ERROR - 2012-10-21 01:15:13 --> Query error: Unknown column 'environment_layer_map' in 'field list'
+ERROR - 2012-10-21 01:19:55 --> Severity: Notice  --> Undefined property: stdClass::$user_id C:\wamp\www\cloudrealms3\application\views\editor\characters\index.php 22
+ERROR - 2012-10-21 01:20:38 --> 404 Page Not Found --> editor/users

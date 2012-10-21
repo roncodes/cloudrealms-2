@@ -6,6 +6,7 @@ class Characters extends MY_Controller {
 	{
 		parent::__construct();
 		$this->load->model('character_model', 'characters');
+		$this->load->model('location_model', 'locations');
 		$this->load->model('zodiac_model', 'zodiacs');
 		$this->load->model('class_model', 'classes');
 		$this->load->model('attribute_model', 'attributes');
@@ -287,6 +288,7 @@ class Characters extends MY_Controller {
 		$this->form_validation->set_rules('player_id', 'Player', 'required|trim|xss_clean');
 		$this->form_validation->set_rules('name', 'Name', 'required|trim|xss_clean');
 		$this->form_validation->set_rules('level', 'Level', 'trim|xss_clean|integer');
+		$this->form_validation->set_rules('home', 'Home', 'required|trim|xss_clean|integer');
 		$this->form_validation->set_rules('gold', 'Gold', 'trim|xss_clean|integer');
 		$this->form_validation->set_rules('skill_points', 'Skill Points', 'trim|xss_clean|integer');
 		$this->form_validation->set_rules('attack', 'Attack Points', 'required|trim|xss_clean|integer');
@@ -334,6 +336,13 @@ class Characters extends MY_Controller {
 			$characters[$character->id] = $character->name;
 		}
 		$this->data['characters'] = $characters;
+		$all_locations = $this->locations->get_all();
+		$locations = array('' => 'Select one');
+		foreach ($all_locations as $location)
+		{
+			$locations[$location->id] = $location->name;
+		}
+		$this->data['locations'] = $locations;
 		$this->data['meta_title'] = 'Create Character';
 	}
 	
