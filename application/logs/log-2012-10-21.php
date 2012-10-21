@@ -100,3 +100,19 @@ ERROR - 2012-10-21 01:36:43 --> Severity: Notice  --> Undefined variable: tiles 
 ERROR - 2012-10-21 01:36:43 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 27
 ERROR - 2012-10-21 01:36:45 --> 404 Page Not Found --> editor/world-map
 ERROR - 2012-10-21 01:37:07 --> 404 Page Not Found --> editor/users
+ERROR - 2012-10-21 01:38:45 --> Severity: Notice  --> Undefined variable: tiles C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 17
+ERROR - 2012-10-21 01:38:45 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 17
+ERROR - 2012-10-21 01:38:45 --> Severity: Notice  --> Undefined variable: tiles C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 27
+ERROR - 2012-10-21 01:38:45 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 27
+ERROR - 2012-10-21 02:10:37 --> Severity: Notice  --> Undefined variable: tiles C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 17
+ERROR - 2012-10-21 02:10:37 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 17
+ERROR - 2012-10-21 02:10:37 --> Severity: Notice  --> Undefined variable: tiles C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 27
+ERROR - 2012-10-21 02:10:37 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 27
+ERROR - 2012-10-21 02:18:21 --> Severity: Notice  --> Undefined variable: tiles C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 17
+ERROR - 2012-10-21 02:18:21 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 17
+ERROR - 2012-10-21 02:18:21 --> Severity: Notice  --> Undefined variable: tiles C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 27
+ERROR - 2012-10-21 02:18:21 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 27
+ERROR - 2012-10-21 02:19:53 --> Severity: Notice  --> Undefined variable: tiles C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 17
+ERROR - 2012-10-21 02:19:53 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 17
+ERROR - 2012-10-21 02:19:53 --> Severity: Notice  --> Undefined variable: tiles C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 27
+ERROR - 2012-10-21 02:19:53 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 27
