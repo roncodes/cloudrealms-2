@@ -10,7 +10,6 @@ class Characters extends MY_Controller {
 		$this->load->model('zodiac_model', 'zodiacs');
 		$this->load->model('class_model', 'classes');
 		$this->load->model('attribute_model', 'attributes');
-		$this->data['navbar'] = $this->load->view('editor/characters/navbar', null, true);
 	}
 	
 	public function index()
@@ -21,6 +20,8 @@ class Characters extends MY_Controller {
 	
 	public function classes($action = NULL, $id = NULL)
 	{
+		$this->view = 'editor/characters/classes/index';
+		
 		if($action=='create') {
 			/**
 				CREATE CLASS
@@ -37,7 +38,7 @@ class Characters extends MY_Controller {
 				flashmsg('Class created successfully.', 'success');
 				redirect('/editor/characters/classes');
 			}
-			$this->view = 'editor/characters/create_class';
+			$this->view = 'editor/characters/classes/create';
 			
 		} else if($action=='edit') {
 			/**
@@ -61,10 +62,11 @@ class Characters extends MY_Controller {
 				flashmsg('Class has been updated successfully.', 'success');
 				redirect('/editor/characters/classes');
 			}
-			$this->view = 'editor/characters/edit_class';
+			$this->view = 'editor/characters/classes/edit';
+			
 		} else if($action=='delete') {
 			/**
-				DELETE ATTRIBUTE
+				DELETE CLASS
 			**/
 			$class = $this->data['class'] = $this->classes->get($id);
 			if (empty($id) || empty($class))
@@ -101,7 +103,8 @@ class Characters extends MY_Controller {
 				}
 			}
 			$this->data['csrf'] = $this->_get_csrf_nonce();
-			$this->view = 'editor/characters/delete_class';
+			$this->view = 'editor/characters/classes/delete';
+			
 		}
 		$this->data['attributes'] = $this->attributes->get_all();
 		$this->data['classes'] = $this->classes->get_all();
@@ -110,6 +113,8 @@ class Characters extends MY_Controller {
 	
 	public function zodiacs($action = NULL, $id = NULL)
 	{
+		$this->view = 'editor/characters/zodiacs/index';
+		
 		if($action=='create') {
 			/**
 				CREATE ZODIAC
@@ -126,7 +131,7 @@ class Characters extends MY_Controller {
 				flashmsg('Zodiac created successfully.', 'success');
 				redirect('/editor/characters/zodiacs');
 			}
-			$this->view = 'editor/characters/create_zodiac';
+			$this->view = 'editor/characters/zodiacs/create';
 			
 		} else if($action=='edit') {
 			/**
@@ -150,7 +155,8 @@ class Characters extends MY_Controller {
 				flashmsg('Zodiac has been updated successfully.', 'success');
 				redirect('/editor/characters/zodiacs');
 			}
-			$this->view = 'editor/characters/edit_zodiac';
+			$this->view = 'editor/characters/zodiacs/edit';
+			
 		} else if($action=='delete') {
 			/**
 				DELETE ZODIAC
@@ -190,7 +196,7 @@ class Characters extends MY_Controller {
 				}
 			}
 			$this->data['csrf'] = $this->_get_csrf_nonce();
-			$this->view = 'editor/characters/delete_zodiac';
+			$this->view = 'editor/characters/zodiacs/delete';
 		}
 		$this->data['attributes'] = $this->attributes->get_all();
 		$this->data['zodiacs'] = $this->zodiacs->get_all();
@@ -199,6 +205,8 @@ class Characters extends MY_Controller {
 	
 	public function attributes($action = NULL, $id = NULL)
 	{
+		$this->view = 'editor/characters/attributes/index';
+		
 		if($action=='create') {
 			$this->form_validation->set_rules('name', 'Name', 'required|trim|xss_clean');
 			$this->form_validation->set_rules('acronym', 'Acronym', 'required|trim|xss_clean|min_length[2]|max_length[4]');
@@ -213,7 +221,8 @@ class Characters extends MY_Controller {
 				flashmsg('Attribute created successfully.', 'success');
 				redirect('/editor/characters/attributes');
 			}
-			$this->view = 'editor/characters/create_attr';
+			$this->view = 'editor/characters/attributes/create';
+			
 		} else if($action=='edit') {
 			/**
 				EDIT ATTRIBUTE
@@ -237,7 +246,8 @@ class Characters extends MY_Controller {
 				flashmsg('Attribute has been updated successfully.', 'success');
 				redirect('/editor/characters/attributes');
 			}
-			$this->view = 'editor/characters/edit_attr';
+			$this->view = 'editor/characters/attributes/edit';
+			
 		} else if($action=='delete') {
 			/**
 				DELETE ATTRIBUTE
@@ -277,7 +287,7 @@ class Characters extends MY_Controller {
 				}
 			}
 			$this->data['csrf'] = $this->_get_csrf_nonce();
-			$this->view = 'editor/characters/delete_attr';
+			$this->view = 'editor/characters/attributes/delete';
 		}
 		$this->data['attributes'] = $this->attributes->get_all();
 		$this->data['meta_title'] = 'Character Attributes';
