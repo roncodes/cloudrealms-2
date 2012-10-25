@@ -1,8 +1,8 @@
 <div class="pane">
 	<div class="page-header">
-		<h1>Deactivate Character</h1>
+		<h1>Activate Character</h1>
 	</div>
-	<p>Are you sure you want to deactivate the character '<?=$character->name?>'?</p>
+	<p>Are you sure you want to activate the character '<?=$character->name?>'?</p>
 	<?=form_open(current_url())?>
 		<div class="control-group">
 			<div class="controls">
@@ -13,7 +13,7 @@
 		<?=form_hidden($csrf)?>
 		<?=form_hidden(array('id' => $character->id))?>
 		<div class="form-actions">
-			<?=bootstrap_submit('submit', 'Deactivate Character', 'class="btn btn-warning"')?>
+			<?=bootstrap_submit('submit', 'Activate Character', 'class="btn btn-success"')?>
 			<a href="<?=base_url('editor/characters')?>" class="btn">Cancel</a>
 		</div>
 	<?=form_close()?>

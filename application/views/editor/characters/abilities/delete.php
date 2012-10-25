@@ -1,8 +1,8 @@
 <div class="pane">
 	<div class="page-header">
-		<h1>Deactivate Character</h1>
+		<h1>Delete Ability</h1>
 	</div>
-	<p>Are you sure you want to deactivate the character '<?=$character->name?>'?</p>
+	<p>Are you sure you want to delete this ability '<?=$ability->name?>'?</p>
 	<?=form_open(current_url())?>
 		<div class="control-group">
 			<div class="controls">
@@ -11,10 +11,10 @@
 			</div>
 		</div>
 		<?=form_hidden($csrf)?>
-		<?=form_hidden(array('id' => $character->id))?>
+		<?=form_hidden(array('id' => $ability->id))?>
 		<div class="form-actions">
-			<?=bootstrap_submit('submit', 'Deactivate Character', 'class="btn btn-warning"')?>
-			<a href="<?=base_url('editor/characters')?>" class="btn">Cancel</a>
+			<?=bootstrap_submit('submit', 'Delete', 'class="btn btn-danger"')?>
+			<a href="<?=base_url('editor/characters/abilities')?>" class="btn">Cancel</a>
 		</div>
 	<?=form_close()?>
 </div>

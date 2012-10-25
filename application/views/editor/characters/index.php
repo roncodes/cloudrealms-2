@@ -13,6 +13,7 @@
 				<th>Class</th>
 				<th>Gender</th>
 				<th>Zodiac</th>
+				<th>Status</th>
 				<th>Actions</th>
 			</tr>
 		</thead>
@@ -31,6 +32,7 @@
 				<td><?=$class->name?></td>
 				<td><?=$character->gender?></td>
 				<td><?=$zodiac->name?></td>
+				<td><?=($character->active) ? anchor(base_url('editor/characters/deactivate/'.$character->id), 'Active') : anchor(base_url('editor/characters/activate/'.$character->id), 'Inactive'); ?></td>
 				<td>
 					<a href="<?=base_url('editor/characters/edit/'.$character->id)?>"><i class="icon-pencil"></i></a>
 					<a href="<?=base_url('editor/characters/delete/'.$character->id)?>"><i class="icon-trash"></i></a>
