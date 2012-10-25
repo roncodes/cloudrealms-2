@@ -68,3 +68,31 @@ ERROR - 2012-10-25 10:19:24 --> Severity: Notice  --> Trying to get property of 
 ERROR - 2012-10-25 10:23:58 --> Severity: Notice  --> mysql_pconnect() [<a href='function.mysql-pconnect'>function.mysql-pconnect</a>]: send of 5 bytes failed with errno=10053 An established connection was aborted by the software in your host machine.
  C:\wamp\www\cloudrealms3\system\database\drivers\mysql\mysql_driver.php 91
 ERROR - 2012-10-25 10:45:06 --> 404 Page Not Found --> characters/powers
+ERROR - 2012-10-25 10:48:50 --> Severity: Notice  --> Undefined variable: tiles C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 17
+ERROR - 2012-10-25 10:48:50 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 17
+ERROR - 2012-10-25 10:48:50 --> Severity: Notice  --> Undefined variable: tiles C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 27
+ERROR - 2012-10-25 10:48:50 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 27
+ERROR - 2012-10-25 10:51:57 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-25 10:52:12 --> Severity: Notice  --> Undefined variable: tiles C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 17
+ERROR - 2012-10-25 10:52:12 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 17
+ERROR - 2012-10-25 10:52:12 --> Severity: Notice  --> Undefined variable: tiles C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 27
+ERROR - 2012-10-25 10:52:12 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 27
+ERROR - 2012-10-25 10:52:19 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\controllers\editor\map.php 45
+ERROR - 2012-10-25 10:52:42 --> Severity: Notice  --> Undefined variable: tiles C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 17
+ERROR - 2012-10-25 10:52:42 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 17
+ERROR - 2012-10-25 10:52:42 --> Severity: Notice  --> Undefined variable: tiles C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 27
+ERROR - 2012-10-25 10:52:42 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 27
+ERROR - 2012-10-25 10:52:56 --> Severity: Notice  --> Undefined variable: tiles C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 17
+ERROR - 2012-10-25 10:52:56 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 17
+ERROR - 2012-10-25 10:52:56 --> Severity: Notice  --> Undefined variable: tiles C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 27
+ERROR - 2012-10-25 10:52:56 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 27
+ERROR - 2012-10-25 10:54:00 --> 404 Page Not Found --> editor/quests
+ERROR - 2012-10-25 19:55:58 --> Severity: Notice  --> mysql_pconnect() [<a href='function.mysql-pconnect'>function.mysql-pconnect</a>]: send of 5 bytes failed with errno=10053 An established connection was aborted by the software in your host machine.
+ C:\wamp\www\cloudrealms3\system\database\drivers\mysql\mysql_driver.php 91
+ERROR - 2012-10-25 20:32:00 --> Severity: Notice  --> Undefined variable: tiles C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 17
+ERROR - 2012-10-25 20:32:00 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 17
+ERROR - 2012-10-25 20:32:00 --> Severity: Notice  --> Undefined variable: tiles C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 27
+ERROR - 2012-10-25 20:32:00 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\application\views\editor\map\index.php 27
+ERROR - 2012-10-25 20:36:26 --> 404 Page Not Found --> editor/world-map
+ERROR - 2012-10-25 20:36:29 --> 404 Page Not Found --> editor/creatures
+ERROR - 2012-10-25 20:39:09 --> 404 Page Not Found --> editor/items
