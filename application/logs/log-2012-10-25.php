@@ -67,3 +67,4 @@ ERROR - 2012-10-25 10:19:24 --> Severity: Notice  --> Undefined variable: skill 
 ERROR - 2012-10-25 10:19:24 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\application\views\editor\characters\abilities\delete.php 14
 ERROR - 2012-10-25 10:23:58 --> Severity: Notice  --> mysql_pconnect() [<a href='function.mysql-pconnect'>function.mysql-pconnect</a>]: send of 5 bytes failed with errno=10053 An established connection was aborted by the software in your host machine.
  C:\wamp\www\cloudrealms3\system\database\drivers\mysql\mysql_driver.php 91
+ERROR - 2012-10-25 10:45:06 --> 404 Page Not Found --> characters/powers
