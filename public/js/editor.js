@@ -30,6 +30,7 @@ $(function() {
 			});
 		});
 	}
+	setTimeout(function(){$('#monolog').fadeOut(); }, 900);
 });
 
 /* Global vars */
