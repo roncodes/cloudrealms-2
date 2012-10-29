@@ -8,7 +8,7 @@
 							<input id="username" name="username" type="text" value="" placeholder="Username" class="span6" style="height:30px;width:586px;line-height:30px;font-size:20px;">
 						</div>
 					</div>
-					<div class="control-group ">
+					<!--<div class="control-group ">
 						<div class="controls">
 							<input id="first_name" name="first_name" type="text" value="" placeholder="First Name" class="span6" style="height:30px;width:586px;line-height:30px;font-size:20px;">
 						</div>
@@ -17,7 +17,7 @@
 						<div class="controls">
 							<input id="last_name" name="last_name" type="text" value="" placeholder="Last Name" class="span6" style="height:30px;width:586px;line-height:30px;font-size:20px;">
 						</div>
-					</div>
+					</div>-->
 					<div class="control-group ">
 						<div class="controls">
 							<input id="email" name="email" type="text" value="" placeholder="Email" class="span6" style="height:30px;width:586px;line-height:30px;font-size:20px;">

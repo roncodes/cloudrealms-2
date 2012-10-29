@@ -1,7 +1,7 @@
 <div class="start-window outer">
 	<div class="start-window container alpha60">
 		<div class="start-window window">
-			<h2 style="text-align:center;"><?=$settings['game_title']?></h2>
+			<h2 style="text-align:center;"><img src="<?=base_url('public/img/logo.png')?>" alt="<?=$settings['game_title']?>"></h2>
 			<div class="tab-content start-content">
 				<div class="tab-pane" id="updates">
 					<p>Updates</p>
