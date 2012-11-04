@@ -462,3 +462,7 @@ ERROR - 2012-11-04 07:45:14 --> Severity: Notice  --> Undefined variable: tiles 
 ERROR - 2012-11-04 07:45:14 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\engine\views\editor\map\index.php 17
 ERROR - 2012-11-04 07:45:14 --> Severity: Notice  --> Undefined variable: tiles C:\wamp\www\cloudrealms3\engine\views\editor\map\index.php 27
 ERROR - 2012-11-04 07:45:14 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\cloudrealms3\engine\views\editor\map\index.php 27
+ERROR - 2012-11-04 08:02:57 --> 404 Page Not Found --> characters/powers
+ERROR - 2012-11-04 08:03:25 --> 404 Page Not Found --> characters/powers
+ERROR - 2012-11-04 08:12:00 --> Query error: Table 'cloudrealms.powers' doesn't exist
+ERROR - 2012-11-04 08:37:11 --> 404 Page Not Found --> characters/aptitudes

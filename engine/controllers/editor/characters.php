@@ -12,6 +12,8 @@ class Characters extends MY_Controller {
 		$this->load->model('attribute_model', 'attributes');
 		$this->load->model('skill_model', 'skills');
 		$this->load->model('ability_model', 'abilities');
+		$this->load->model('power_model', 'powers');
+		$this->load->model('aptitude_model', 'aptitudes');
 		$this->load->model('race_model', 'races');
 	}
 	
@@ -856,7 +858,251 @@ class Characters extends MY_Controller {
 		$this->data['races'] = $races;
 		$this->data['attributes'] = $this->attributes->get_all();
 		$this->data['abilities'] = $this->abilities->get_all();
-		$this->data['meta_title'] = 'Character Skills';
+		$this->data['meta_title'] = 'Character Abilities';
+	}
+	
+	public function powers($action = NULL, $id = NULL)
+	{
+		$this->view = 'editor/characters/powers/index';
+		if($action!=NULL) {
+			$this->view = 'editor/characters/powers/'.$action;
+		}
+		
+		if($action=='create') {
+			$this->form_validation->set_rules('name', 'Name', 'required|trim|xss_clean');
+			$this->form_validation->set_rules('description', 'Description', 'required|trim|xss_clean');
+			$this->form_validation->set_rules('class', 'Class', 'required|trim|xss_clean');
+			$this->form_validation->set_rules('zodiac', 'Zodiac', 'required|trim|xss_clean');
+			$this->form_validation->set_rules('race', 'Race', 'required|trim|xss_clean');
+			$this->form_validation->set_rules('level', 'Level', 'required|trim|xss_clean');
+			
+			if ($this->form_validation->run() == TRUE && $this->powers->insert(array(
+																					'name' => $this->input->post('name'),
+																					'description' => $this->input->post('description'),
+																					'class' => $this->input->post('class'),
+																					'zodiac' => $this->input->post('zodiac'),
+																					'race' => $this->input->post('race'),
+																					'level' => $this->input->post('level'),
+																					'attributes' => $this->_parse_attributes($_POST))))
+			{
+				// Creating the power was successful, redirect them back to the admin page
+				flashmsg('Ability created successfully.', 'success');
+				redirect('/editor/characters/powers');
+			}
+			
+		} else if($action=='edit') {
+			$power = $this->data['power'] = $this->powers->get($id);
+			if (empty($id) || empty($power))
+			{
+				flashmsg('You must specify a power to edit.', 'error');
+				redirect('/editor/characters/powers');
+			}
+			$this->form_validation->set_rules('name', 'Name', 'required|trim|xss_clean');
+			$this->form_validation->set_rules('description', 'Description', 'required|trim|xss_clean');
+			$this->form_validation->set_rules('class', 'Class', 'required|trim|xss_clean');
+			$this->form_validation->set_rules('zodiac', 'Zodiac', 'required|trim|xss_clean');
+			$this->form_validation->set_rules('race', 'Race', 'required|trim|xss_clean');
+			$this->form_validation->set_rules('level', 'Level', 'required|trim|xss_clean');
+			
+			if ($this->form_validation->run() == TRUE && $this->powers->update($id, array(
+																					'name' => $this->input->post('name'),
+																					'description' => $this->input->post('description'),
+																					'class' => $this->input->post('class'),
+																					'zodiac' => $this->input->post('zodiac'),
+																					'race' => $this->input->post('race'),
+																					'level' => $this->input->post('level'),
+																					'attributes' => $this->_parse_attributes($_POST))))
+			{
+				// Editing the power was successful, redirect them back to the admin page
+				flashmsg('Ability has been updated successfully.', 'success');
+				redirect('/editor/characters/powers');
+			}
+			
+		} else if($action=='delete') {
+			$power = $this->data['power'] = $this->powers->get($id);
+			if (empty($id) || empty($power))
+			{
+				flashmsg('You must specify a power to delete.', 'error');
+				redirect('/editor/characters/powers');
+			}
+			$this->form_validation->set_rules('confirm', 'confirmation', 'required');
+			$this->form_validation->set_rules('id', 'power ID', 'required|is_natural');
+			if ($this->form_validation->run() === TRUE)
+			{
+				// Do we really want to delete?
+				if ($this->input->post('confirm') == 'yes')
+				{
+					// Do we have a valid request?
+					if ($this->_valid_csrf_nonce() === FALSE || $id != $this->input->post('id'))
+					{
+						show_404();
+					}
+
+					// Do we have the right userlevel?
+					if ($this->ion_auth->logged_in() && $this->ion_auth->is_admin())
+					{
+						$this->powers->delete($id);
+					}
+					
+					// Redirect them back to the admin page
+					flashmsg('Ability deleted successfully.', 'success');
+					redirect('/editor/characters/powers');
+				}
+				else
+				{
+					redirect('/editor/characters/powers');
+				}
+			}
+			$this->data['csrf'] = $this->_get_csrf_nonce();
+		}
+		
+		$all_classes = $this->classes->get_all();
+		$classes = array('*' => 'Any');
+		foreach($all_classes as $class) {
+			$classes[$class->id] = $class->name;
+		}
+		$this->data['classes'] = $classes;
+		
+		$all_zodiacs = $this->zodiacs->get_all();
+		$zodiacs = array('*' => 'Any');
+		foreach($all_zodiacs as $zodiac) {
+			$zodiacs[$zodiac->id] = $zodiac->name;
+		}
+		$this->data['zodiacs'] = $zodiacs;
+		
+		$all_races = $this->races->get_all();
+		$races = array('*' => 'Any');
+		foreach($all_races as $race) {
+			$races[$race->id] = $race->name;
+		}
+		$this->data['races'] = $races;
+		$this->data['attributes'] = $this->attributes->get_all();
+		$this->data['powers'] = $this->powers->get_all();
+		$this->data['meta_title'] = 'Character Powers';
+	}
+	
+	public function aptitudes($action = NULL, $id = NULL)
+	{
+		$this->view = 'editor/characters/aptitudes/index';
+		if($action!=NULL) {
+			$this->view = 'editor/characters/aptitudes/'.$action;
+		}
+		
+		if($action=='create') {
+			$this->form_validation->set_rules('name', 'Name', 'required|trim|xss_clean');
+			$this->form_validation->set_rules('description', 'Description', 'required|trim|xss_clean');
+			$this->form_validation->set_rules('damage', 'Damage', 'required|trim|xss_clean');
+			$this->form_validation->set_rules('class', 'Class', 'required|trim|xss_clean');
+			$this->form_validation->set_rules('zodiac', 'Zodiac', 'required|trim|xss_clean');
+			$this->form_validation->set_rules('race', 'Race', 'required|trim|xss_clean');
+			$this->form_validation->set_rules('level', 'Level', 'required|trim|xss_clean');
+			
+			if ($this->form_validation->run() == TRUE && $this->aptitudes->insert(array(
+																					'name' => $this->input->post('name'),
+																					'description' => $this->input->post('description'),
+																					'damage' => $this->input->post('damage'),
+																					'class' => $this->input->post('class'),
+																					'zodiac' => $this->input->post('zodiac'),
+																					'race' => $this->input->post('race'),
+																					'level' => $this->input->post('level'),
+																					'attributes' => $this->_parse_attributes($_POST))))
+			{
+				// Creating the aptitude was successful, redirect them back to the admin page
+				flashmsg('Ability created successfully.', 'success');
+				redirect('/editor/characters/aptitudes');
+			}
+			
+		} else if($action=='edit') {
+			$aptitude = $this->data['aptitude'] = $this->aptitudes->get($id);
+			if (empty($id) || empty($aptitude))
+			{
+				flashmsg('You must specify a aptitude to edit.', 'error');
+				redirect('/editor/characters/aptitudes');
+			}
+			$this->form_validation->set_rules('name', 'Name', 'required|trim|xss_clean');
+			$this->form_validation->set_rules('description', 'Description', 'required|trim|xss_clean');
+			$this->form_validation->set_rules('damage', 'Damage', 'required|trim|xss_clean');
+			$this->form_validation->set_rules('class', 'Class', 'required|trim|xss_clean');
+			$this->form_validation->set_rules('zodiac', 'Zodiac', 'required|trim|xss_clean');
+			$this->form_validation->set_rules('race', 'Race', 'required|trim|xss_clean');
+			$this->form_validation->set_rules('level', 'Level', 'required|trim|xss_clean');
+			
+			if ($this->form_validation->run() == TRUE && $this->aptitudes->update($id, array(
+																					'name' => $this->input->post('name'),
+																					'description' => $this->input->post('description'),
+																					'damage' => $this->input->post('damage'),
+																					'class' => $this->input->post('class'),
+																					'zodiac' => $this->input->post('zodiac'),
+																					'race' => $this->input->post('race'),
+																					'level' => $this->input->post('level'),
+																					'attributes' => $this->_parse_attributes($_POST))))
+			{
+				// Editing the aptitude was successful, redirect them back to the admin page
+				flashmsg('Ability has been updated successfully.', 'success');
+				redirect('/editor/characters/aptitudes');
+			}
+			
+		} else if($action=='delete') {
+			$aptitude = $this->data['aptitude'] = $this->aptitudes->get($id);
+			if (empty($id) || empty($aptitude))
+			{
+				flashmsg('You must specify a aptitude to delete.', 'error');
+				redirect('/editor/characters/aptitudes');
+			}
+			$this->form_validation->set_rules('confirm', 'confirmation', 'required');
+			$this->form_validation->set_rules('id', 'aptitude ID', 'required|is_natural');
+			if ($this->form_validation->run() === TRUE)
+			{
+				// Do we really want to delete?
+				if ($this->input->post('confirm') == 'yes')
+				{
+					// Do we have a valid request?
+					if ($this->_valid_csrf_nonce() === FALSE || $id != $this->input->post('id'))
+					{
+						show_404();
+					}
+
+					// Do we have the right userlevel?
+					if ($this->ion_auth->logged_in() && $this->ion_auth->is_admin())
+					{
+						$this->aptitudes->delete($id);
+					}
+					
+					// Redirect them back to the admin page
+					flashmsg('Ability deleted successfully.', 'success');
+					redirect('/editor/characters/aptitudes');
+				}
+				else
+				{
+					redirect('/editor/characters/aptitudes');
+				}
+			}
+			$this->data['csrf'] = $this->_get_csrf_nonce();
+		}
+		
+		$all_classes = $this->classes->get_all();
+		$classes = array('*' => 'Any');
+		foreach($all_classes as $class) {
+			$classes[$class->id] = $class->name;
+		}
+		$this->data['classes'] = $classes;
+		
+		$all_zodiacs = $this->zodiacs->get_all();
+		$zodiacs = array('*' => 'Any');
+		foreach($all_zodiacs as $zodiac) {
+			$zodiacs[$zodiac->id] = $zodiac->name;
+		}
+		$this->data['zodiacs'] = $zodiacs;
+		
+		$all_races = $this->races->get_all();
+		$races = array('*' => 'Any');
+		foreach($all_races as $race) {
+			$races[$race->id] = $race->name;
+		}
+		$this->data['races'] = $races;
+		$this->data['attributes'] = $this->attributes->get_all();
+		$this->data['aptitudes'] = $this->aptitudes->get_all();
+		$this->data['meta_title'] = 'Character Aptitudes';
 	}
 
 }
