@@ -17,7 +17,7 @@
 		<![endif]-->
 		<!-- Javascript -->
 		<script type="text/javascript" src="<?=base_url('public/js/jquery.js')?>"></script>
-		<script type="text/javascript" src="<?=base_url('public/js/jquery-ui.js')?>"></script>
+		<script type="text/javascript" src="<?=base_url('public/js/jquery-ui.min.js')?>"></script>
 		<script type="text/javascript" src="<?=base_url('public/js/jquery.dataTables.min.js')?>"></script>
 		<script type="text/javascript" src="<?=base_url('public/js/dataTables.bootstrap.js')?>"></script>
 		<script type="text/javascript" src="<?=base_url('public/js/bootstrap.min.js')?>"></script>
@@ -71,13 +71,13 @@
 						<?php } else { ?>
 						<li <?php if($page=='map'){ ?> class="active" <? } ?> id="map_editor"><a href="<?=base_url('editor/map')?>">Map Editor</a></li>
 						<?php } ?>
-						<li <?php if($page=='world-map'){ ?> class="active" <? } ?> id="locations"><a href="<?=base_url()?>editor/world-map">World Map</a></li>
-						<li <?php if($page=='items'){ ?> class="active" <? } ?> id="items"><a href="<?=base_url()?>editor/items">Items</a></li>
-						<li <?php if($page=='creatures'){ ?> class="active" <? } ?> id="creatures"><a href="<?=base_url()?>editor/creatures">Creatures</a></li>
-						<li <?php if($page=='books'){ ?> class="active" <? } ?> id="books"><a href="<?=base_url()?>editor/books">Books</a></li>
-						<li <?php if($page=='quests'){ ?> class="active" <? } ?> id="quests"><a href="<?=base_url()?>editor/quests">Quests</a></li>
-						<li <?php if($page=='characters'){ ?> class="active" <? } ?> id="characters"><a href="<?=base_url()?>editor/characters">Characters</a></li>
-						<li <?php if($page=='resources'){ ?> class="active" <? } ?> id="resources"><a href="<?=base_url()?>editor/resources">Resources</a></li>
+						<li <?php if($page=='world_map'){ ?> class="active" <? } ?> id="locations"><a href="<?=base_url('editor/world_map')?>">World Map</a></li>
+						<li <?php if($page=='items'){ ?> class="active" <? } ?> id="items"><a href="<?=base_url('editor/items')?>">Items</a></li>
+						<li <?php if($page=='creatures'){ ?> class="active" <? } ?> id="creatures"><a href="<?=base_url('editor/creatures')?>">Creatures</a></li>
+						<li <?php if($page=='books'){ ?> class="active" <? } ?> id="books"><a href="<?=base_url('editor/books')?>">Books</a></li>
+						<li <?php if($page=='quests'){ ?> class="active" <? } ?> id="quests"><a href="<?=base_url('editor/quests')?>">Quests</a></li>
+						<li <?php if($page=='characters'){ ?> class="active" <? } ?> id="characters"><a href="<?=base_url('editor/characters')?>">Characters</a></li>
+						<li <?php if($page=='resources'){ ?> class="active" <? } ?> id="resources"><a href="<?=base_url('editor/resources')?>">Resources</a></li>
 						<li class="divider-vertical"></li>
 						<li <?php if($page=='app'){ ?> class="dropdown active" <? } else { ?>class="dropdown"<?php } ?> id="app">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="<?=base_url('editor/app')?>">App<b class="caret"></b></a>

@@ -466,3 +466,58 @@ ERROR - 2012-11-04 08:02:57 --> 404 Page Not Found --> characters/powers
 ERROR - 2012-11-04 08:03:25 --> 404 Page Not Found --> characters/powers
 ERROR - 2012-11-04 08:12:00 --> Query error: Table 'cloudrealms.powers' doesn't exist
 ERROR - 2012-11-04 08:37:11 --> 404 Page Not Found --> characters/aptitudes
+ERROR - 2012-11-04 08:55:59 --> 404 Page Not Found --> editor/world-map
+ERROR - 2012-11-04 08:59:57 --> 404 Page Not Found --> world-map/index
+ERROR - 2012-11-04 09:01:45 --> 404 Page Not Found --> editor/world-map
+ERROR - 2012-11-04 09:03:26 --> 404 Page Not Found --> editor/world-map
+ERROR - 2012-11-04 09:06:51 --> Severity: Notice  --> Undefined variable: locations C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 5
+ERROR - 2012-11-04 09:53:15 --> Severity: Notice  --> Undefined offset: 1 C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 17
+ERROR - 2012-11-04 09:53:15 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 17
+ERROR - 2012-11-04 09:53:15 --> Severity: Notice  --> Undefined offset: 1 C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 17
+ERROR - 2012-11-04 09:53:15 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 17
+ERROR - 2012-11-04 09:53:15 --> Severity: Notice  --> Undefined offset: 1 C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 17
+ERROR - 2012-11-04 09:53:15 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 17
+ERROR - 2012-11-04 09:53:15 --> Severity: Notice  --> Undefined offset: 1 C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 17
+ERROR - 2012-11-04 09:53:15 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 17
+ERROR - 2012-11-04 09:53:15 --> Severity: Notice  --> Undefined offset: 1 C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 17
+ERROR - 2012-11-04 09:53:15 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 17
+ERROR - 2012-11-04 09:53:15 --> Severity: Notice  --> Undefined offset: 2 C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 17
+ERROR - 2012-11-04 09:53:15 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 17
+ERROR - 2012-11-04 09:53:15 --> Severity: Notice  --> Undefined offset: 2 C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 17
+ERROR - 2012-11-04 09:53:15 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 17
+ERROR - 2012-11-04 09:53:15 --> Severity: Notice  --> Undefined offset: 2 C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 17
+ERROR - 2012-11-04 09:53:15 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 17
+ERROR - 2012-11-04 09:53:15 --> Severity: Notice  --> Undefined offset: 2 C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 17
+ERROR - 2012-11-04 09:53:15 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 17
+ERROR - 2012-11-04 09:53:15 --> Severity: Notice  --> Undefined offset: 2 C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 17
+ERROR - 2012-11-04 09:53:15 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 17
+ERROR - 2012-11-04 09:53:15 --> Severity: Notice  --> Undefined offset: 3 C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 17
+ERROR - 2012-11-04 09:53:15 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 17
+ERROR - 2012-11-04 09:53:15 --> Severity: Notice  --> Undefined offset: 3 C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 17
+ERROR - 2012-11-04 09:53:15 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 17
+ERROR - 2012-11-04 09:53:15 --> Severity: Notice  --> Undefined offset: 3 C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 17
+ERROR - 2012-11-04 09:53:15 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 17
+ERROR - 2012-11-04 09:53:15 --> Severity: Notice  --> Undefined offset: 3 C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 17
+ERROR - 2012-11-04 09:53:15 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 17
+ERROR - 2012-11-04 09:53:15 --> Severity: Notice  --> Undefined offset: 3 C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 17
+ERROR - 2012-11-04 09:53:15 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 17
+ERROR - 2012-11-04 09:53:15 --> Severity: Notice  --> Undefined offset: 4 C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 17
+ERROR - 2012-11-04 09:53:15 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 17
+ERROR - 2012-11-04 09:53:15 --> Severity: Notice  --> Undefined offset: 4 C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 17
+ERROR - 2012-11-04 09:53:15 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 17
+ERROR - 2012-11-04 09:53:15 --> Severity: Notice  --> Undefined offset: 4 C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 17
+ERROR - 2012-11-04 09:53:15 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 17
+ERROR - 2012-11-04 09:53:15 --> Severity: Notice  --> Undefined offset: 4 C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 17
+ERROR - 2012-11-04 09:53:15 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 17
+ERROR - 2012-11-04 09:53:15 --> Severity: Notice  --> Undefined offset: 4 C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 17
+ERROR - 2012-11-04 09:53:15 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 17
+ERROR - 2012-11-04 09:54:14 --> Severity: Notice  --> Undefined offset: 1 C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 21
+ERROR - 2012-11-04 09:54:15 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 21
+ERROR - 2012-11-04 09:54:15 --> Severity: Notice  --> Undefined offset: 2 C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 21
+ERROR - 2012-11-04 09:54:15 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 21
+ERROR - 2012-11-04 09:54:15 --> Severity: Notice  --> Undefined offset: 3 C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 21
+ERROR - 2012-11-04 09:54:15 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 21
+ERROR - 2012-11-04 09:54:15 --> Severity: Notice  --> Undefined offset: 4 C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 21
+ERROR - 2012-11-04 09:54:15 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 21
+ERROR - 2012-11-04 09:54:15 --> Severity: Notice  --> Undefined offset: 5 C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 21
+ERROR - 2012-11-04 09:54:15 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\cloudrealms3\engine\views\editor\world_map\index.php 21
