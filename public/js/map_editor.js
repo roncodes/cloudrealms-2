@@ -290,7 +290,7 @@ var create_new_location = function(){
 		} else if(data=='name_exist'){
 			notif("error", "Failure", "Location name already exist");
 		} else {
-			notif("error", "Failure", "Location failed to create");
+			notif("error", "Failure", "Location failed to create, cannot contain special characters");
 		}
 	});
 }

@@ -26,11 +26,17 @@ class Ajax extends MY_Controller {
 					}
 					break;
 				case 'create_location':
-					if($this->_location_name_available($_GET['location_name'])){
-						$result = $this->db->query("INSERT INTO locations (name) VALUES ('".strtolower($_GET['location_name'])."')");
+					extract($_GET);
+					if($this->_location_name_available($location_name)){
+						if (preg_match('/[^a-zA-Z]+/', $location_name, $matches))
+						{
+							echo 'fail';
+							return;
+						}
+						$result = $this->db->query("INSERT INTO locations (name) VALUES ('".strtolower($location_name)."')");
 					} else {
 						echo "name_exist";
-						die();
+						return;
 					}
 					if($result){
 						echo "success";
