@@ -188,7 +188,7 @@ class Characters extends MY_Controller {
 				// Do we have the right userlevel?
 				if ($this->ion_auth->logged_in() && $this->ion_auth->is_admin())
 				{
-					$this->ion_auth->delete_user($id);
+					$this->characters->delete($id);
 				}
 				
 				// Redirect them back to the admin page

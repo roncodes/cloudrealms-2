@@ -21,7 +21,7 @@
 		<script type="text/javascript" src="<?=base_url('public/js/jquery.dataTables.min.js')?>"></script>
 		<script type="text/javascript" src="<?=base_url('public/js/dataTables.bootstrap.js')?>"></script>
 		<script type="text/javascript" src="<?=base_url('public/js/bootstrap.min.js')?>"></script>
-		<script type="text/javascript" src="<?=base_url('public/js/editor.js')?>"></script>
+		<script type="text/javascript" src="<?=base_url('public/js/map_editor.js')?>"></script>
 		<script type="text/javascript" src="<?=base_url('public/js/uploader.js')?>"></script>
 		<script>
 		$(document).ready(function() {
@@ -60,12 +60,11 @@
 								<li class="divider"></li>
 								<li><a style="cursor:pointer;" onclick="open_tiles();">Tiles</a></li>
 								<li><a style="cursor:pointer;" onclick="open_objects();">Objects</a></li>
-								<li><a style="cursor:pointer;" onclick="open_creatures();">Creatures</a></li>
+								<li><a style="cursor:pointer;" onclick="open_monsters();">Monsters</a></li>
 								<li><a style="cursor:pointer;" onclick="open_characters();">Characters</a></li>
 								<li class="divider"></li>
-								<li><a style="cursor:pointer;" href="<?=base_url('editor/map')?>">Start Page</a></li>
-								<?php } else { ?>
-								<li><a style="cursor:pointer;" href="<?=base_url('editor/map')?>">Open</a></li>
+								<li><a style="cursor:pointer;" href="<?=base_url('editor/map/delete/'.$this->uri->segment(4))?>">Delete Location</a></li>
+								<li><a style="cursor:pointer;" href="<?=base_url('editor/map')?>">Exit</a></li>
 								<?php } ?>
 							</ul>
 						</li>

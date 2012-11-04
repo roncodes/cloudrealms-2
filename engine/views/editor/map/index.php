@@ -44,12 +44,13 @@
 <?php if($location){ ?>
 load_map_ground('<?php echo $location; ?>');
 load_map_environment('<?php echo $location; ?>');
+<?php } else { ?>
+$('.dropdown-menu').hide();
 <?php } ?>
 </script>
 <?php if($location==''){ ?>
 <div class="cmodal" id="locations_navigator" style="width:700px;">
 	<div class="modal-header">
-		<a class="close" onclick="close_tiles();" data-dismiss="modal"><i class="icon-remove"></i></a>
 		<h3>Map Editor</h3>
 	</div>
 	<div id="start_body" class="modal-body" style="max-height:100%;height:800px;">
@@ -91,7 +92,7 @@ load_map_environment('<?php echo $location; ?>');
 			<div class="control-group">
 				<div class="controls">
 					<button type="button" onclick="create_new_location();" class="btn btn-primary">Create!</button>
-					<button class="btn" onclick="cancel_new_location();">Cancel</button>
+					<button class="btn" onclick="cancel_new_location();return false;">Cancel</button>
 				</div>
 			</div>
 		</fieldset>

@@ -18,6 +18,28 @@ function flashmsg($string, $flag = 'info') {
 	$CI->session->set_userdata('monolog_flag', $flag);
 }
 
+function cralert($title, $message, $action_title = NULL, $action = NULL)
+{
+	?>
+	<div class="cr_modal_bg"></div>
+	<div id="cr_modal">
+		<div class="modal-header">
+			<button type="button" class="close" onclick="$(this).parent().parent().fadeOut();$('.cr_modal_bg').fadeOut();">x</button>
+			<h3 id="myModalLabel"><?=$title?></h3>
+		</div>
+		<div class="modal-body">
+			<p><?=$message?></p>
+		</div>
+		<div class="modal-footer">
+			<button class="btn" onclick="$(this).parent().parent().fadeOut();$('.cr_modal_bg').fadeOut();">Close</button>
+			<?php if($action_title!=NULL) { ?>
+			<a class="btn btn-primary" href="<?=base_url($action)?>"><?=$action_title?></a>
+			<?php } ?>
+		</div>
+	</div>
+	<?php
+}
+
 function showflashmsg() {
 	$CI =& get_instance();
 	$monolog = $CI->session->userdata('monolog');
