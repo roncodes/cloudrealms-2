@@ -7,7 +7,7 @@ An incomplete & unmaintained PHP based MMORPG game engine.
 [Screenshots](https://imgur.com/a/Hmyfd)
 </p>
 
-**Notice**
+## Notice
 
 This is a very outdated and unmaintained game engine I started developing using CodeIgniter years ago. There won't be anymore work on this, but the source is here just incase anyone can find any use for it. 
 
@@ -17,7 +17,7 @@ Otherwise I have started what will basically be a completely new version of Clou
 
 You can find the new Cloudrealms game engine development on Github at [@cloudrealmsrpg](https://github.com/cloudrealmsrpg)
 
-**Usage**
+## Usage
 
 If you'd still like to check out this outdated version. The login details are below.
 
